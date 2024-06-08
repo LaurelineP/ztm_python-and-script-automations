@@ -24,7 +24,7 @@ Types: classification of what a value represents
 - and more that will follow...
 
 
-## 🔹 Function
+## 🔹 Functions
 Named chunk of code ( snippet ) encapsulated in order  
 to be invoked on demand to perform a specific task   
 ( the code within that function )  
@@ -685,3 +685,12 @@ The most basic files - computer files containing un-formatting text
   - For data exchange
 
 #### Reading a text file
+Using "open" built-in function 
+1. open the file ( probably binary content )
+2. read the file content with `.read()` function
+```py
+open(<file>, <mode>)
+# file: filename with extension
+# mode: mode rights over the file
+#   - 'r': to read a file
+```

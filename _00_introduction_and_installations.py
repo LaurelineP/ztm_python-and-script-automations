@@ -1,7 +1,9 @@
 from datetime import datetime
+
+from custom_utils import log_header
+
 print('\n\n\n')
-print(' ======== 00. Introduction & Installations ============ ')
-print(' ====================================================== ')
+log_header('00. Introduction & Installations', False)
 print(' --- prompt_user: ask for interaction ')
 print(' --- play_with_text: prints text where case changes ')
 print(' --- state_date_difference: prompt for a date - returns how many days it was or remains ')
@@ -47,17 +49,18 @@ date_format = '%Y/%m/%d'
 
 
 def format_date_y_m_d(datetime_value):
-    """ From datetime object, get the formatted date string as [ YYYY/MM/DD ]"""
+    """[ extra ] From datetime object, get the formatted date string as [ YYYY/MM/DD ]"""
     return datetime_value.strftime(date_format)
 
 
 def state_date_difference():
-    """ From a given date, it will output how many days it was or remaining days until a point"""
+    """ [ logic deviation ]  From a given date, it will output how many days it was or remaining days until a point"""
     current_date_string_y_m_d = format_date_y_m_d(datetime.now())
 
     # Gets date to get the delta with
     requested_date_string_y_m_d = input(
-        'Please enter the date [ YYYY/MM/DD ]: ')
+        'Please enter the date [ YYYY/MM/DD ]: '
+    )
 
     # Convert date string to date object
     current_date = datetime.strptime(current_date_string_y_m_d, date_format)
