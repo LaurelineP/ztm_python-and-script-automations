@@ -1,9 +1,29 @@
 
+"""
+    Provides useful development utils 
+    - log_header: 3 lines delimiting a header to print for instance
+    - log_object: displays an object available properties and methods
+"""
+
+import os
+
+
 # ---------------------------------------------------------------------------- #
 #                                    LOGGERS                                   #
 # ---------------------------------------------------------------------------- #
 
+
 def log_header(string, is_upper=True):
+    """ Generate header formatted - to identify a section for instance
+
+    Args:
+        string (str): header / title in comment
+        is_upper (bool, optional): Allows to control wether all the string is 
+        transformed or not. Defaults to True.
+
+    Returns:
+        str: header - block of lines to depict it as header
+    """
     # default constants
     _line_length = 56
     _char = "="
@@ -71,7 +91,6 @@ def log_object(obj):
 
 def get_this_folder_ctx(filename_in_this_folder):
     """[ extra ] Resolve current file path in this current folder """
-    import os
     dir_ctx = os.path.dirname(os.path.abspath(__file__))
     path = os.path.join(dir_ctx, filename_in_this_folder)
     return path

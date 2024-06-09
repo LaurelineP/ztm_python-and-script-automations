@@ -1,3 +1,10 @@
+"""
+	Reads file - 2 ways, with: 
+	- a simple `open()`
+	- a `with open()`
+"""
+
+
 from custom_utils import log_header
 
 
@@ -8,7 +15,7 @@ def read_file(file_path):
     log_header('READ_FILE FUNCTION')
 
     # Open and read file
-    file = open(file_path, 'r')
+    file = open(file_path, 'r', encoding="utf-8")
     file_content = file.read()
     file.close()
 
@@ -26,7 +33,7 @@ def read_file_with(file_path):
 
     # Open and read file - self-contained - using "with"
     file_content = ''
-    with open(file_path, 'r') as file:
+    with open(file_path, 'r', encoding="utf-8") as file:
         file_content = file.read()
 
     print(f'\t > 2. file content:\n\t\t "{file_content}"')

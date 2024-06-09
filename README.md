@@ -1,5 +1,5 @@
 # Python
-## 🔹 Terminal / Shell / Python Shell
+## 📌 Terminal / Shell / Python Shell
 Terminal - Allows you to run commands and also your programs.
 There are other ways to execute code such as program in files.
 - from shell enabling a programming context
@@ -9,7 +9,7 @@ In shell
 write the command `python` which will reveal a python context for you to write some python and we will explore there for now
 
 
-## 🔹 Values and Types
+## 📌 Values and Types
 Types: classification of what a value represents
 | Data Type | Python keyword | Examples      |
 |-----------|----------------|---------------|
@@ -18,13 +18,13 @@ Types: classification of what a value represents
 | Chain of characters / a string | str   | 'hello', 'yu', 'I am 9' |
 
 
-- Numbers ( integers, float ): are writen as it is - typing numbers
+- Numbers ( integers, float ): are written as it is - typing numbers
 - Strings: need to be wrapped by quotes ( single, double )
 `"This is a valid string in python"
 - and more that will follow...
 
 
-## 🔹 Functions
+## 📌 Functions
 Named chunk of code ( snippet ) encapsulated in order  
 to be invoked on demand to perform a specific task   
 ( the code within that function )  
@@ -64,13 +64,13 @@ float(123)
 ```
 
 
-## 🔹 Expressions
+## 📌 Expressions
 An expression is a statement evaluated in the code such as conditions   
 for instance, using built in keywords.
 A combination of values and operators ( =, -, + , etc... )
 
 ### Special operators
-`//` integer devision operators --> will enforce to return an integer  
+`//` integer division operators --> will enforce to return an integer  
 `%` modulo operator --> return the remainder of a division
 `**` power operator --> return the power of the 2 numbers combined
 
@@ -114,11 +114,11 @@ We can multiply a string value to repeat that one
 
 ```py
 "Ha" * 3
-# Retuns "HaHaHa"
+# Returns "HaHaHa"
 ```
 
 
-## 🔹 Variables
+## 📌 Variables
 Its a way to store a value to be re-used at different moment
 and can be re-assigned by providing a different variable.
 ```py
@@ -134,7 +134,7 @@ print(my_name)
 ```
 
 
-## 🔹 Variables naming
+## 📌 Variables naming
 Naming convention in python is mainly snake case
 `snake_case_variable`
 
@@ -146,25 +146,25 @@ Variable naming:
 ( for, while, in, if, else, print, type, etc...)
 - should not be the same as another variable name - to avoid overriding
 
-## 🔹 Errors
+## 📌 Errors
 Errors can happen while programming and should be anticipated in order to 
 prevent our code / program to stop or crash.
 Key to debug: read the error - which is insightful
 
 ### Different type of error in Python
-- Syntax Error: a mispell / a non interpreted caracter  
-- Name Error: refering to a keyword that is mispell  
+- Syntax Error: a misspell / a non interpreted character  
+- Name Error: referring to a keyword that is misspell  
 - Semantic Error: wrong logic implemented even if the syntax is correct:  
   this could lead to an unexpected output. Ex: missing parentheses in an
   operation
 
 
-## 🔹 F Strings
-Allows to easilly include a or multiple values on a string dynamically  
+## 📌 F Strings
+Allows to easily include a or multiple values on a string dynamically  
 Introduced in 3.7 Python  
 Short for Formatted String  
 Prepended by f followed by quotes  
-Inbetween quotes it is your string and the  
+In-between quotes it is your string and the  
 dynamic value between curly braces  
 Values can be variable, expression or functions returning a value.
 ```py
@@ -173,7 +173,7 @@ my_str = f'Name: {name}'
 # Returns "Name: Lowla"
 ```
 
-## 🔹 Objects, Attributes and Methods
+## 📌 Objects, Attributes and Methods
 **Objects** are way to organize data and functionality in Python
 _Python is considered as an object oriented language - considering   
 everything is an object: numbers, variable, functions, etc..._
@@ -195,21 +195,21 @@ print("Hello you, How are you?".lower())
 # Returns 'hello you, how are you?'
 ```
 
-## 🔹 Scripts
+## 📌 Scripts
 Second way of writing python, not in the shell but in a file.
 Using the shell - is useful when you want to check something  
 but if you want to save and longer and maintain your code, it is  
 best to move forwards a file that then you will execute with the shell
 Within a script we can also comment bits of code for better maintainability
 - the file must be <filename>.py
-- executing the script / file : `pyton <filename>.py`
+- executing the script / file : `python <filename>.py`
 - example: `python main.py`
 
 ```py
 # in main.py
 # Demo coding in a file to execute it as a script
 
-text = 'Please answer the follwing questions'
+text = 'Please answer the following questions'
 print(text)
 
 upper_text = text.upper()
@@ -240,8 +240,8 @@ python main.py
 ```
 
 
-## 🔹 Comments
-Explaning some codes - those text are ignored for the code
+## 📌 Comments
+Explaining some codes - those text are ignored for the code
 execution but is useful for anyone reading it.
 - inline comments
 To create a comment: we need to add "#" at the beginning of the line
@@ -260,11 +260,11 @@ Comments
 ```
 
 
-## 🔹 Data Structure
-A data structure is a specific way to organise data,  
+## 📌 Data Structure
+A data structure is a specific way to organize data,  
 it is possible to have nested list, objects for instance
 ### Lists ( `[ <value>, <value> ]` )
-- stores differents types of values
+- stores different types of values
 - syntax: values should be within square brackets separated by comma
 - accessible via indexes wrapped by square brackets too  
 ( indexes are the position number starting with 0 )
@@ -283,7 +283,7 @@ print([ 'Hey', 0 ][0])
 print(favorites[0] === [ 'Hey', 0 ][0])
 # Returns True
 
-print(len(favirotes))
+print(len(favourites))
 # Return 2
 
 favorites[0] = 'Aloha'
@@ -304,7 +304,7 @@ my_tuple = (1,2,'hey')
 
 # Will raise an error as tuple cannot be mutable
 my_tuple[0] = 0
-# Traceback (most recent call last):
+# Trace-back (most recent call last):
 #  File "<stdin>", line 1, in <module>
 # TypeError: 'tuple' object does not support item assignment
 ```
@@ -321,12 +321,12 @@ Dictionaries as Word with its corresponding definition but here it is
 its value.
 
 - stores data, any type of values in a key : value pair way
-- syntax: key/value pair should be express within curcly braces
+- syntax: key/value pair should be express within curly braces
 - accessible using square notation with the key: <variable-name>['<key>']
 - values are mutable
 
 ```py
-# Definiting a dictionary
+# Defining a dictionary
 my_dict = {
   'name': 'dictionary',
   'word_number': 1
@@ -344,7 +344,7 @@ print( my_dict )
 ```
 
 
-## 🔹 `If` Statements 
+## 📌 `If` Statements 
 Enabling to check for a condition in order for the program   
 to apply the logic associated to that statement.
 Indentation creates block = in this example, the code block
@@ -382,12 +382,12 @@ else:
 ```
 
 
-## 🔹 Or and And operators
-Used in conditions by eiher enable multiple condition (OR) or by combining  
+## 📌 Or and And operators
+Used in conditions by either enable multiple condition (OR) or by combining  
 statements to valid a condition
 
 
-## 🔹  Loops
+## 📌  Loops
 #### While loop
 Keep iterate until the condition is not longer true
 
@@ -401,7 +401,7 @@ while number != 0:
   number -= 1
 ```
 
-Sequences: [ range, list, tuple, dictionnary ( keys are the iterables ) ]
+Sequences: [ range, list, tuple, dictionary ( keys are the iterables ) ]
 
 #### for loop
 Loops/Iterates over a fixed number of times
@@ -439,13 +439,13 @@ person = { "name": "Smith", "age": 100 }
 
 
 """"
-When looping over dictionnaries, passing 1 variable would represent the key
+When looping over dictionaries, passing 1 variable would represent the key
 """
 for key in person:
   print(f"The key is: \"{key}\"")
 
 """
-When looping over dictionnaries, we can get value using square notation
+When looping over dictionaries, we can get value using square notation
 """
 for key in person:
   value = person[key]
@@ -459,8 +459,8 @@ The value for the key "age" is "100"
 
 
 """
-Or we can get the iterables of values from the dictionnary
-using <dictionnary>.values()
+Or we can get the iterables of values from the dictionary
+using <dictionary>.values()
 """
 for value in person.values():
   print(f'The value is "{value}"')
@@ -474,7 +474,7 @@ The value is "100"
 
 
 """
-Or we can get the collection of tuples ( keys, values ) iterables from the dictionnary using <dictionnary>.items()
+Or we can get the collection of tuples ( keys, values ) iterables from the dictionary using <dictionary>.items()
 We must provide 2 variables in order to get the item of each .items() tuples
 """
 for key, value in person.items():
@@ -487,26 +487,44 @@ The key is "age" and its value is "100"
 """
 ```
 
-## 🔹  Modules, Libraries and Classes
-Modules is like a toolbox - providing some functions / classes to use within the courese
+## 📌  Modules, Libraries and Classes
+Modules is like a toolbox - providing some functions / classes to use within the course
 Libraries can contain multiple toolboxes ( modules )
 Classes are the tiny toolbox for a specific moment
 
 
-### - Class
+### 🔹 Class
 - template creating object ( blueprint - skeleton of an
-object that could be used to shape multiple objets )
+object that could be used to shape multiple objects )
 - initializers ( functions ) are provided to create instances  
 ( instance: an object created from the blueprint )
-- class often have buidt-in methods to do tasks attached to the
+- class often have built-in methods to do tasks attached to the
   concern of this class
+
+
+### 🔹 Modules
+A file or a folder containing file to import ans reuse as needed.
+Note: while importing - we must keep in mind that Python is OOP, and so
+is oriented the imports.
+
+Folder modules, may need to add the `__init__.py` file to let the interpreter know
+the file within can be imported - without it you might go crazy while trying to import.  
+
+- **Folder and its nested file are accessible using dot notation**
+  - "regular path": `<my-folder>.<my-file-name>` ( no need to specify   
+  the file extension) as plain objects ( not string )
+  - "relative path": `.<my-file-name>`
+
+- **From same folder, import sibling file**
+  - without that `__init__.py` your IDE might not be happy and not letting you  
+  to import it.
 
 
 
 ### Useful modules 
 | Module | Description |
 | ------ | ----------- |
-| datetime | anyting related to dates |
+| datetime | anything related to dates |
 
 
 ```py
@@ -524,8 +542,8 @@ new_years_day = datetime.datetime(year=now.year + 1, month=1, day=1)
 ```
 
 
-
-# 🔹 Installing Python ( mac )
+## 📌 Installing Python & PyCharm
+### 🔹 Installing Python ( mac )
 
 Step 1: Check for Existing Python Installation
 Before installing a new version of Python, it's a good idea to check if you already have Python installed on your Mac, which can sometimes be the case.
@@ -574,7 +592,7 @@ pip is Python's package manager and is used to install Python packages. It usual
 
 
 
-# 🔹 Install Pycharm ( mac )
+### 🔹 Install Pycharm ( mac )
 Prerequisites
 - macOS: Ensure your Mac is running on macOS 10.13 (High Sierra) or later.
 
@@ -609,7 +627,7 @@ Step 3: Running PyCharm
 
 2. Initial Setup: The first time you open PyCharm, you’ll go through an initial setup process. This includes accepting the license agreement and configuring the IDE according to your preferences (like choosing a theme).
 
-## 🔹 Installing Python ( windows )
+### 🔹 Installing Python ( windows )
 Step 1: Download Python
 1. Visit the Official Python Website: Open your web browser and go to the official Python website.
 
@@ -641,7 +659,7 @@ Step 3: Verify the Installation
 
 3. Verify Pip Installation: Type pip --version to ensure that pip (Python's package installer) is also installed.
 
-## 🔹 Installing Pycharm ( windows )
+### 🔹 Installing Pycharm ( windows )
 Prerequisites
 - macOS: Ensure your Mac is running on macOS 10.13 (High Sierra) or later.
 
@@ -676,21 +694,49 @@ Step 3: Running PyCharm
 
 2. Initial Setup: The first time you open PyCharm, you’ll go through an initial setup process. This includes accepting the license agreement and configuring the IDE according to your preferences (like choosing a theme).
 
-## 🔸 Working With Files
-### Plaintext files:
+## 📌 Working With Files
+### 🔹 Plaintext files:
 The most basic files - computer files containing un-formatting text
   - For configurations files
   - For source code
   - For Notes and reminders
   - For data exchange
 
-#### Reading a text file
+#### Reading and writing a text file
 Using "open" built-in function 
-1. open the file ( probably binary content )
-2. read the file content with `.read()` function
+1. open the file ( result as probably some binary content )
+3. specify the mode: describe what action will be
+2. apply the action you want to do
+3. close : close the file reading - emptying the memory busyness
+
+- POSSIBLE ACTIONS
+  - 'r' to read
+  - 'w' to write / override a whole file content
+  - 'a' appends to the file content ( does not override )
+
+
+| methods on files | description |
+| ---------------- | ----------- |
+| `.read()` | read a file |
+| `.readline()` | read a file line |
+| `.write(<string-content>)` | write into a file a new line |
+| `.writelines(<string-list>)` | write into a file a new line, automatically goes at a new line |
+
+
+##### FIRST WAY - OPEN AND CLOSE
 ```py
-open(<file>, <mode>)
-# file: filename with extension
-# mode: mode rights over the file
-#   - 'r': to read a file
+open(<file>, <mode>) as file:
+  # ....
+  file.close() # must be closed
+  # file: filename with extension
+  # mode: mode rights over the file
+  #   - 'r': to read a file
+```
+
+##### SECOND WAY - OPEN AND AUTOMATICALLY CLOSE USING WITH
+```py
+with open(<file>, <mode>) as file:
+  # ....
+  # No need to close - the context will be close thanks to "with" keyword
+
 ```
