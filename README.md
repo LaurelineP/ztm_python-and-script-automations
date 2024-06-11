@@ -740,3 +740,49 @@ with open(<file>, <mode>) as file:
   # No need to close - the context will be close thanks to "with" keyword
 
 ```
+
+### 🔹 CSV files
+Comma Separated Values file is a file where we values are organized in 
+columns and rowsquit
+This module takes a file binary as first argument, and returns a reader `csv.reader`
+
+There is a built-in module called `csv` that is available from python.
+
+#### Reading CSV
+Note - reading and 
+1. open the file as we previously did: with `with open(<filepath>, 'r')`
+2. read the csv `csv_reader = csv.reader(file)`: gives a file content iterable
+3. iterate to read the values
+4. note that the headers are printed - trick use `next(csv_reader)` so it
+starts at the first row of values instead of the headers.
+
+
+#### Writing CSV
+2 possibilities
+1. open the file as we previously did: with `with open(<filepath>, 'w') as csv_file:`
+2. using the `csv` built-in module:
+```py
+with open(<filepath>, 'w') as csv_file:
+  csv_writer = csv.writer( csv_file )
+  # write line
+  csv_writer.writeline([ 'name', 'age' ])
+  csv_writer.writeline([ 'Lowla', 100 ])
+
+  # write multiple lines at once
+  csv_writer.writelines([[ 'name', 'age' ], [ 'Lowla', 100 ]])
+```
+## Manipulating CSV Data - Example
+### Process:
+- should read file and get its content
+- transform these into string in order to manipulate them
+- do not forget to keep the headers in order to reuse them in 
+following file generation
+- generate the CSV file 
+
+
+## 🗂️ Project: Input - Output
+### Original instructions
+- create a csv file with dad jokes or refers to original course content, to get the file
+- from this file, generate another CSV file with an extra column
+- this column will have values representing, in a human friendly way, an interpretation   
+the vote value 

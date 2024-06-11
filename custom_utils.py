@@ -7,8 +7,6 @@
 
 import os
 
-
-# ---------------------------------------------------------------------------- #
 #                                    LOGGERS                                   #
 # ---------------------------------------------------------------------------- #
 
@@ -89,12 +87,16 @@ def log_object(obj):
 # ---------------------------------------------------------------------------- #
 
 
-def get_this_folder_ctx(filename_in_this_folder):
+def get_this_folder_ctx(filename_in_this_folder, ctx_file=__file__):
     """[ extra ] Resolve current file path in this current folder """
-    dir_ctx = os.path.dirname(os.path.abspath(__file__))
+    dir_ctx = os.path.dirname(ctx_file)
     path = os.path.join(dir_ctx, filename_in_this_folder)
     return path
 
+
+def get_curr_dir(this_file):
+    """ Gets current directory / folder name """
+    return os.path.dirname(os.path.abspath(this_file))
 
 # read_file.read_file('text.txt')
 # """
