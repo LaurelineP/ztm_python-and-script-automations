@@ -8,12 +8,12 @@ import os
 import sys
 
 import _00_introduction_and_installations as intro
+import _01_working_with_files.csv_data_manipulation as csv_manip
 import _01_working_with_files.csv_file as csv_file
 import _01_working_with_files.read_text as reader
 import _01_working_with_files.write_text as writer
-from custom_utils import get_this_folder_ctx, log_header
+from custom_utils import log_header
 
-# log_object(os)
 CURRENT_FOLDER = os.path.dirname(os.path.abspath(__file__))
 FILE_INPUTS_FOLDER = 'file_inputs'
 FILE_OUTPUTS_FOLDER = 'file_outputs'
@@ -84,6 +84,12 @@ def run_working_with_files():
     ]
 
     csv_file.write_csv_with_csv(output_filename_in_folder, contents=csv_rows)
+
+    # ---------------------------- MANIPULATE CSV DATA --------------------------- #
+    csv_manip.manipulate_csv(
+        f'{FILE_INPUTS_FOLDER}/csv-manipulation_movies.csv',
+        file_output=f'{FILE_OUTPUTS_FOLDER}/csv-manipulation_movies__output.csv',
+    )
 
 
 # ---------------------------------------------------------------------------- #
