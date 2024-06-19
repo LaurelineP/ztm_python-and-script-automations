@@ -98,7 +98,7 @@ def get_curr_dir(this_file):
     """ Gets current directory / folder name """
     return os.path.dirname(os.path.abspath(this_file))
 
-# read_file.read_file('text.txt')
+# read_file.read_file('sample-text.txt')
 # """
 # Q: How to contextualize this current folder to open the file?
 # Instead of taking the context from the command execution

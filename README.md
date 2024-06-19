@@ -755,6 +755,9 @@ Note - reading and
 3. iterate to read the values
 4. note that the headers are printed - trick use `next(csv_reader)` so it
 starts at the first row of values instead of the headers.
+5. read a line: `.readline()`
+6. read lines: `.readlines()`
+6. read the whole content: `.read()`
 
 
 #### Writing CSV
@@ -771,7 +774,7 @@ with open(<filepath>, 'w') as csv_file:
   # write multiple lines at once
   csv_writer.writelines([[ 'name', 'age' ], [ 'Lowla', 100 ]])
 ```
-## Manipulating CSV Data - Example
+### Manipulating CSV Data - Example
 ### Process:
 - should read file and get its content
 - transform these into string in order to manipulate them
@@ -785,4 +788,69 @@ following file generation
 - create a csv file with dad jokes or refers to original course content, to get the file
 - from this file, generate another CSV file with an extra column
 - this column will have values representing, in a human friendly way, an interpretation   
-the vote value 
+the vote value 2
+
+
+## 🔹 PATHS AND FOLDERS
+Using Python built-in module `pathlib`
+```py
+Path(<path-string>)
+  # check if exist
+  .exists()
+
+  # check if directory
+  .is_dir()
+
+  # check if is file
+  .is_file()
+
+  # get name ( folder or file with extension )
+  .name
+
+  # get name without extension
+  .stem
+
+  # get info 
+  .stat()
+
+  # create iterator for a path to reach nested folder or file
+  .iterdir();
+```
+
+### Create folders
+```py
+Path(<path-string>)
+ # create a directory
+  .mkdir() # can raise error
+    # prevents from raising an error if not exitst
+    .mkdir(exist_ok = True)
+
+    # if path does not exist - error is not raised but will recursively create path missing folders
+    .mkdir(exist_ok = True, parents: True)
+```
+
+### Copy / renaming and removing files & folders
+Using Python built-in module `shutil` ( shell utils ? )
+```py
+import shutil
+path = Path(<path-string>)
+
+ # copy file
+  shutil.copy(<src-path>, <target-path>)
+
+# copy folder - path target must include the name folder 
+  shutil.copytree(<src-path>, <target-path>, [dirs_exist_ok=True])
+  #[dirs_exist_ok=True] optional: to copy recursively
+
+# renaming is moving a file to another location 
+  shutil.move(<src-path>, <target-path>)
+
+# deleting for folder
+<path>.rmdir()
+
+# deleting a file
+<path>.unlink(missing_ok = True)
+
+# deleting a folder and its content
+<path>.rmtree()
+```
