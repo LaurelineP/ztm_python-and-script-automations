@@ -11,10 +11,11 @@ import sys
 import _00_introduction_and_installations as intro
 import _01_working_with_files.csv_data_manipulation as csv_manip
 import _01_working_with_files.csv_file as csv_file
-import _01_working_with_files.project_product_sales as project
+import _01_working_with_files.project_product_sales as project1
 import _01_working_with_files.read_text as reader
 import _01_working_with_files.write_text as writer
 import _02_path_and_folders as paths
+import _02_path_and_folders.project__files_and_folder_cleaner as project2
 from custom_utils import log_header
 
 CURRENT_FOLDER = os.path.dirname(os.path.abspath(__file__))
@@ -94,26 +95,6 @@ def run_working_with_files():
         file_output=f'{FILE_OUTPUTS_FOLDER}/sample-movies__to-manipulate__output.csv',
     )
 
-    # ---------------------------------------------------------------------------- #
-    #                                    PROJECT                                   #
-    # ---------------------------------------------------------------------------- #
-    filename = 'project__product_sales'
-    filepath_input = os.path.join(
-        CURRENT_FOLDER,
-        '_01_working_with_files',
-        f'{FILE_INPUTS_FOLDER}/{filename}.txt'
-    )
-    filepath_output = os.path.join(
-        CURRENT_FOLDER,
-        '_01_working_with_files',
-        f'{FILE_OUTPUTS_FOLDER}/{filename}__output.csv'
-    )
-    # filepath = pathlib
-    project.run(
-        filepath_input,
-        filepath_output
-    )
-
 
 # 02 - Path and folder
 def run_paths_and_folders():
@@ -153,6 +134,35 @@ def run_paths_and_folders():
         pathlib.Path('./_02_path_and_folders/work_dir/file_to_remove.txt'),
     )
 
+# ---------------------------------------------------------------------------- #
+#                                   PROJECTS                                   #
+# ---------------------------------------------------------------------------- #
+
+
+def run_project_product_sales():
+    """Project I/O: read and write csv file by adding more columns to be more readable"""
+    filename = 'project__product_sales'
+    filepath_input = os.path.join(
+        CURRENT_FOLDER,
+        '_01_working_with_files',
+        f'{FILE_INPUTS_FOLDER}/{filename}.txt'
+    )
+    filepath_output = os.path.join(
+        CURRENT_FOLDER,
+        '_01_working_with_files',
+        f'{FILE_OUTPUTS_FOLDER}/{filename}__output.csv'
+    )
+    # filepath = pathlib
+    project1.run(
+        filepath_input,
+        filepath_output
+    )
+
+
+def run_project_folder_cleaner():
+    """Cleans / Organizes files and folder based on a given file"""
+    project2.run()
+
 
 # ---------------------------------------------------------------------------- #
 #                                      CLI                                     #
@@ -164,10 +174,22 @@ try:
         "files": run_working_with_files,
         "paths": run_paths_and_folders
     }
-    _this_file, instruction = sys.argv
-    programs[instruction]()
+
+    projects = {
+        "files": run_project_product_sales,
+        "paths": run_project_folder_cleaner,
+    }
+
+    print(sys.argv)
+    _this_file, category, instruction = sys.argv
+    
+    if category == 'program':
+        programs[instruction]()
+    if category == 'project':
+        projects[instruction]()
 except (AttributeError, KeyError) as error:
     log_header("🔥 Error")
     print('\t==> error:', error)
     print('Invalid program, here are the possible commands:"')
-    print('\t>', list(programs.keys()))
+    print('\t> programs', list(programs.keys()),
+          '\n\t>projects', list(projects.keys()))

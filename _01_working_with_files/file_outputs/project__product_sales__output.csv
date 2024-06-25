@@ -1,1 +1,1001 @@
 current_date,sales_id,product_id,product_name,price
+2024-06-25,2,P005,Mobile Phone Case,15
+2024-06-25,3,P001,Wireless Headphones,100
+2024-06-25,4,P001,Wireless Headphones,100
+2024-06-25,5,P006,Wireless Mouse,30
+2024-06-25,6,P006,Wireless Mouse,30
+2024-06-25,7,P003,Bluetooth Speaker,50
+2024-06-25,8,P004,USB Flash Drive,20
+2024-06-25,9,P007,Laptop Stand,40
+2024-06-25,10,P005,Mobile Phone Case,15
+2024-06-25,11,P006,Wireless Mouse,30
+2024-06-25,12,P004,USB Flash Drive,20
+2024-06-25,13,P006,Wireless Mouse,30
+2024-06-25,14,P007,Laptop Stand,40
+2024-06-25,15,P004,USB Flash Drive,20
+2024-06-25,16,P005,Mobile Phone Case,15
+2024-06-25,17,P010,External Hard Drive,100
+2024-06-25,18,P010,External Hard Drive,100
+2024-06-25,19,P004,USB Flash Drive,20
+2024-06-25,20,P009,Smartphone,600
+2024-06-25,21,P001,Wireless Headphones,100
+2024-06-25,22,P008,HDMI Cable,15
+2024-06-25,23,P007,Laptop Stand,40
+2024-06-25,24,P007,Laptop Stand,40
+2024-06-25,25,P003,Bluetooth Speaker,50
+2024-06-25,26,P007,Laptop Stand,40
+2024-06-25,27,P003,Bluetooth Speaker,50
+2024-06-25,28,P002,Laptop Backpack,60
+2024-06-25,29,P001,Wireless Headphones,100
+2024-06-25,30,P004,USB Flash Drive,20
+2024-06-25,31,P006,Wireless Mouse,30
+2024-06-25,32,P002,Laptop Backpack,60
+2024-06-25,33,P003,Bluetooth Speaker,50
+2024-06-25,34,P008,HDMI Cable,15
+2024-06-25,35,P004,USB Flash Drive,20
+2024-06-25,36,P009,Smartphone,600
+2024-06-25,37,P001,Wireless Headphones,100
+2024-06-25,38,P003,Bluetooth Speaker,50
+2024-06-25,39,P006,Wireless Mouse,30
+2024-06-25,40,P008,HDMI Cable,15
+2024-06-25,41,P004,USB Flash Drive,20
+2024-06-25,42,P009,Smartphone,600
+2024-06-25,43,P008,HDMI Cable,15
+2024-06-25,44,P006,Wireless Mouse,30
+2024-06-25,45,P005,Mobile Phone Case,15
+2024-06-25,46,P005,Mobile Phone Case,15
+2024-06-25,47,P001,Wireless Headphones,100
+2024-06-25,48,P002,Laptop Backpack,60
+2024-06-25,49,P005,Mobile Phone Case,15
+2024-06-25,50,P002,Laptop Backpack,60
+2024-06-25,51,P009,Smartphone,600
+2024-06-25,52,P002,Laptop Backpack,60
+2024-06-25,53,P001,Wireless Headphones,100
+2024-06-25,54,P006,Wireless Mouse,30
+2024-06-25,55,P008,HDMI Cable,15
+2024-06-25,56,P006,Wireless Mouse,30
+2024-06-25,57,P010,External Hard Drive,100
+2024-06-25,58,P002,Laptop Backpack,60
+2024-06-25,59,P008,HDMI Cable,15
+2024-06-25,60,P002,Laptop Backpack,60
+2024-06-25,61,P001,Wireless Headphones,100
+2024-06-25,62,P008,HDMI Cable,15
+2024-06-25,63,P008,HDMI Cable,15
+2024-06-25,64,P006,Wireless Mouse,30
+2024-06-25,65,P006,Wireless Mouse,30
+2024-06-25,66,P002,Laptop Backpack,60
+2024-06-25,67,P004,USB Flash Drive,20
+2024-06-25,68,P005,Mobile Phone Case,15
+2024-06-25,69,P001,Wireless Headphones,100
+2024-06-25,70,P010,External Hard Drive,100
+2024-06-25,71,P001,Wireless Headphones,100
+2024-06-25,72,P003,Bluetooth Speaker,50
+2024-06-25,73,P001,Wireless Headphones,100
+2024-06-25,74,P003,Bluetooth Speaker,50
+2024-06-25,75,P010,External Hard Drive,100
+2024-06-25,76,P008,HDMI Cable,15
+2024-06-25,77,P004,USB Flash Drive,20
+2024-06-25,78,P006,Wireless Mouse,30
+2024-06-25,79,P005,Mobile Phone Case,15
+2024-06-25,80,P001,Wireless Headphones,100
+2024-06-25,81,P009,Smartphone,600
+2024-06-25,82,P009,Smartphone,600
+2024-06-25,83,P010,External Hard Drive,100
+2024-06-25,84,P008,HDMI Cable,15
+2024-06-25,85,P006,Wireless Mouse,30
+2024-06-25,86,P004,USB Flash Drive,20
+2024-06-25,87,P002,Laptop Backpack,60
+2024-06-25,88,P001,Wireless Headphones,100
+2024-06-25,89,P003,Bluetooth Speaker,50
+2024-06-25,90,P003,Bluetooth Speaker,50
+2024-06-25,91,P001,Wireless Headphones,100
+2024-06-25,92,P004,USB Flash Drive,20
+2024-06-25,93,P005,Mobile Phone Case,15
+2024-06-25,94,P010,External Hard Drive,100
+2024-06-25,95,P001,Wireless Headphones,100
+2024-06-25,96,P006,Wireless Mouse,30
+2024-06-25,97,P006,Wireless Mouse,30
+2024-06-25,98,P002,Laptop Backpack,60
+2024-06-25,99,P002,Laptop Backpack,60
+2024-06-25,100,P010,External Hard Drive,100
+2024-06-25,101,P004,USB Flash Drive,20
+2024-06-25,102,P005,Mobile Phone Case,15
+2024-06-25,103,P010,External Hard Drive,100
+2024-06-25,104,P001,Wireless Headphones,100
+2024-06-25,105,P008,HDMI Cable,15
+2024-06-25,106,P003,Bluetooth Speaker,50
+2024-06-25,107,P008,HDMI Cable,15
+2024-06-25,108,P001,Wireless Headphones,100
+2024-06-25,109,P001,Wireless Headphones,100
+2024-06-25,110,P004,USB Flash Drive,20
+2024-06-25,111,P001,Wireless Headphones,100
+2024-06-25,112,P003,Bluetooth Speaker,50
+2024-06-25,113,P004,USB Flash Drive,20
+2024-06-25,114,P004,USB Flash Drive,20
+2024-06-25,115,P003,Bluetooth Speaker,50
+2024-06-25,116,P003,Bluetooth Speaker,50
+2024-06-25,117,P004,USB Flash Drive,20
+2024-06-25,118,P008,HDMI Cable,15
+2024-06-25,119,P008,HDMI Cable,15
+2024-06-25,120,P009,Smartphone,600
+2024-06-25,121,P001,Wireless Headphones,100
+2024-06-25,122,P006,Wireless Mouse,30
+2024-06-25,123,P001,Wireless Headphones,100
+2024-06-25,124,P009,Smartphone,600
+2024-06-25,125,P008,HDMI Cable,15
+2024-06-25,126,P010,External Hard Drive,100
+2024-06-25,127,P001,Wireless Headphones,100
+2024-06-25,128,P007,Laptop Stand,40
+2024-06-25,129,P001,Wireless Headphones,100
+2024-06-25,130,P002,Laptop Backpack,60
+2024-06-25,131,P009,Smartphone,600
+2024-06-25,132,P007,Laptop Stand,40
+2024-06-25,133,P003,Bluetooth Speaker,50
+2024-06-25,134,P001,Wireless Headphones,100
+2024-06-25,135,P005,Mobile Phone Case,15
+2024-06-25,136,P006,Wireless Mouse,30
+2024-06-25,137,P006,Wireless Mouse,30
+2024-06-25,138,P003,Bluetooth Speaker,50
+2024-06-25,139,P006,Wireless Mouse,30
+2024-06-25,140,P002,Laptop Backpack,60
+2024-06-25,141,P001,Wireless Headphones,100
+2024-06-25,142,P010,External Hard Drive,100
+2024-06-25,143,P010,External Hard Drive,100
+2024-06-25,144,P003,Bluetooth Speaker,50
+2024-06-25,145,P003,Bluetooth Speaker,50
+2024-06-25,146,P010,External Hard Drive,100
+2024-06-25,147,P001,Wireless Headphones,100
+2024-06-25,148,P004,USB Flash Drive,20
+2024-06-25,149,P002,Laptop Backpack,60
+2024-06-25,150,P008,HDMI Cable,15
+2024-06-25,151,P001,Wireless Headphones,100
+2024-06-25,152,P001,Wireless Headphones,100
+2024-06-25,153,P001,Wireless Headphones,100
+2024-06-25,154,P003,Bluetooth Speaker,50
+2024-06-25,155,P001,Wireless Headphones,100
+2024-06-25,156,P006,Wireless Mouse,30
+2024-06-25,157,P010,External Hard Drive,100
+2024-06-25,158,P008,HDMI Cable,15
+2024-06-25,159,P002,Laptop Backpack,60
+2024-06-25,160,P008,HDMI Cable,15
+2024-06-25,161,P003,Bluetooth Speaker,50
+2024-06-25,162,P008,HDMI Cable,15
+2024-06-25,163,P005,Mobile Phone Case,15
+2024-06-25,164,P004,USB Flash Drive,20
+2024-06-25,165,P003,Bluetooth Speaker,50
+2024-06-25,166,P005,Mobile Phone Case,15
+2024-06-25,167,P007,Laptop Stand,40
+2024-06-25,168,P010,External Hard Drive,100
+2024-06-25,169,P004,USB Flash Drive,20
+2024-06-25,170,P006,Wireless Mouse,30
+2024-06-25,171,P008,HDMI Cable,15
+2024-06-25,172,P006,Wireless Mouse,30
+2024-06-25,173,P005,Mobile Phone Case,15
+2024-06-25,174,P009,Smartphone,600
+2024-06-25,175,P007,Laptop Stand,40
+2024-06-25,176,P001,Wireless Headphones,100
+2024-06-25,177,P008,HDMI Cable,15
+2024-06-25,178,P009,Smartphone,600
+2024-06-25,179,P001,Wireless Headphones,100
+2024-06-25,180,P001,Wireless Headphones,100
+2024-06-25,181,P003,Bluetooth Speaker,50
+2024-06-25,182,P006,Wireless Mouse,30
+2024-06-25,183,P006,Wireless Mouse,30
+2024-06-25,184,P001,Wireless Headphones,100
+2024-06-25,185,P004,USB Flash Drive,20
+2024-06-25,186,P008,HDMI Cable,15
+2024-06-25,187,P001,Wireless Headphones,100
+2024-06-25,188,P007,Laptop Stand,40
+2024-06-25,189,P004,USB Flash Drive,20
+2024-06-25,190,P001,Wireless Headphones,100
+2024-06-25,191,P001,Wireless Headphones,100
+2024-06-25,192,P006,Wireless Mouse,30
+2024-06-25,193,P009,Smartphone,600
+2024-06-25,194,P004,USB Flash Drive,20
+2024-06-25,195,P004,USB Flash Drive,20
+2024-06-25,196,P008,HDMI Cable,15
+2024-06-25,197,P002,Laptop Backpack,60
+2024-06-25,198,P006,Wireless Mouse,30
+2024-06-25,199,P008,HDMI Cable,15
+2024-06-25,200,P006,Wireless Mouse,30
+2024-06-25,201,P003,Bluetooth Speaker,50
+2024-06-25,202,P001,Wireless Headphones,100
+2024-06-25,203,P004,USB Flash Drive,20
+2024-06-25,204,P004,USB Flash Drive,20
+2024-06-25,205,P002,Laptop Backpack,60
+2024-06-25,206,P006,Wireless Mouse,30
+2024-06-25,207,P004,USB Flash Drive,20
+2024-06-25,208,P001,Wireless Headphones,100
+2024-06-25,209,P005,Mobile Phone Case,15
+2024-06-25,210,P002,Laptop Backpack,60
+2024-06-25,211,P006,Wireless Mouse,30
+2024-06-25,212,P003,Bluetooth Speaker,50
+2024-06-25,213,P001,Wireless Headphones,100
+2024-06-25,214,P003,Bluetooth Speaker,50
+2024-06-25,215,P003,Bluetooth Speaker,50
+2024-06-25,216,P009,Smartphone,600
+2024-06-25,217,P008,HDMI Cable,15
+2024-06-25,218,P010,External Hard Drive,100
+2024-06-25,219,P006,Wireless Mouse,30
+2024-06-25,220,P005,Mobile Phone Case,15
+2024-06-25,221,P010,External Hard Drive,100
+2024-06-25,222,P002,Laptop Backpack,60
+2024-06-25,223,P005,Mobile Phone Case,15
+2024-06-25,224,P010,External Hard Drive,100
+2024-06-25,225,P004,USB Flash Drive,20
+2024-06-25,226,P002,Laptop Backpack,60
+2024-06-25,227,P007,Laptop Stand,40
+2024-06-25,228,P010,External Hard Drive,100
+2024-06-25,229,P009,Smartphone,600
+2024-06-25,230,P009,Smartphone,600
+2024-06-25,231,P004,USB Flash Drive,20
+2024-06-25,232,P008,HDMI Cable,15
+2024-06-25,233,P004,USB Flash Drive,20
+2024-06-25,234,P005,Mobile Phone Case,15
+2024-06-25,235,P001,Wireless Headphones,100
+2024-06-25,236,P007,Laptop Stand,40
+2024-06-25,237,P006,Wireless Mouse,30
+2024-06-25,238,P001,Wireless Headphones,100
+2024-06-25,239,P001,Wireless Headphones,100
+2024-06-25,240,P006,Wireless Mouse,30
+2024-06-25,241,P003,Bluetooth Speaker,50
+2024-06-25,242,P005,Mobile Phone Case,15
+2024-06-25,243,P003,Bluetooth Speaker,50
+2024-06-25,244,P006,Wireless Mouse,30
+2024-06-25,245,P006,Wireless Mouse,30
+2024-06-25,246,P003,Bluetooth Speaker,50
+2024-06-25,247,P002,Laptop Backpack,60
+2024-06-25,248,P006,Wireless Mouse,30
+2024-06-25,249,P009,Smartphone,600
+2024-06-25,250,P001,Wireless Headphones,100
+2024-06-25,251,P004,USB Flash Drive,20
+2024-06-25,252,P009,Smartphone,600
+2024-06-25,253,P001,Wireless Headphones,100
+2024-06-25,254,P008,HDMI Cable,15
+2024-06-25,255,P008,HDMI Cable,15
+2024-06-25,256,P002,Laptop Backpack,60
+2024-06-25,257,P008,HDMI Cable,15
+2024-06-25,258,P002,Laptop Backpack,60
+2024-06-25,259,P008,HDMI Cable,15
+2024-06-25,260,P003,Bluetooth Speaker,50
+2024-06-25,261,P007,Laptop Stand,40
+2024-06-25,262,P003,Bluetooth Speaker,50
+2024-06-25,263,P001,Wireless Headphones,100
+2024-06-25,264,P002,Laptop Backpack,60
+2024-06-25,265,P008,HDMI Cable,15
+2024-06-25,266,P010,External Hard Drive,100
+2024-06-25,267,P008,HDMI Cable,15
+2024-06-25,268,P003,Bluetooth Speaker,50
+2024-06-25,269,P003,Bluetooth Speaker,50
+2024-06-25,270,P001,Wireless Headphones,100
+2024-06-25,271,P001,Wireless Headphones,100
+2024-06-25,272,P001,Wireless Headphones,100
+2024-06-25,273,P001,Wireless Headphones,100
+2024-06-25,274,P006,Wireless Mouse,30
+2024-06-25,275,P001,Wireless Headphones,100
+2024-06-25,276,P003,Bluetooth Speaker,50
+2024-06-25,277,P010,External Hard Drive,100
+2024-06-25,278,P001,Wireless Headphones,100
+2024-06-25,279,P004,USB Flash Drive,20
+2024-06-25,280,P003,Bluetooth Speaker,50
+2024-06-25,281,P004,USB Flash Drive,20
+2024-06-25,282,P002,Laptop Backpack,60
+2024-06-25,283,P003,Bluetooth Speaker,50
+2024-06-25,284,P008,HDMI Cable,15
+2024-06-25,285,P001,Wireless Headphones,100
+2024-06-25,286,P004,USB Flash Drive,20
+2024-06-25,287,P007,Laptop Stand,40
+2024-06-25,288,P010,External Hard Drive,100
+2024-06-25,289,P007,Laptop Stand,40
+2024-06-25,290,P001,Wireless Headphones,100
+2024-06-25,291,P001,Wireless Headphones,100
+2024-06-25,292,P001,Wireless Headphones,100
+2024-06-25,293,P003,Bluetooth Speaker,50
+2024-06-25,294,P004,USB Flash Drive,20
+2024-06-25,295,P010,External Hard Drive,100
+2024-06-25,296,P003,Bluetooth Speaker,50
+2024-06-25,297,P001,Wireless Headphones,100
+2024-06-25,298,P003,Bluetooth Speaker,50
+2024-06-25,299,P003,Bluetooth Speaker,50
+2024-06-25,300,P001,Wireless Headphones,100
+2024-06-25,301,P008,HDMI Cable,15
+2024-06-25,302,P009,Smartphone,600
+2024-06-25,303,P006,Wireless Mouse,30
+2024-06-25,304,P007,Laptop Stand,40
+2024-06-25,305,P008,HDMI Cable,15
+2024-06-25,306,P010,External Hard Drive,100
+2024-06-25,307,P009,Smartphone,600
+2024-06-25,308,P003,Bluetooth Speaker,50
+2024-06-25,309,P009,Smartphone,600
+2024-06-25,310,P004,USB Flash Drive,20
+2024-06-25,311,P006,Wireless Mouse,30
+2024-06-25,312,P003,Bluetooth Speaker,50
+2024-06-25,313,P007,Laptop Stand,40
+2024-06-25,314,P001,Wireless Headphones,100
+2024-06-25,315,P003,Bluetooth Speaker,50
+2024-06-25,316,P003,Bluetooth Speaker,50
+2024-06-25,317,P002,Laptop Backpack,60
+2024-06-25,318,P001,Wireless Headphones,100
+2024-06-25,319,P008,HDMI Cable,15
+2024-06-25,320,P003,Bluetooth Speaker,50
+2024-06-25,321,P006,Wireless Mouse,30
+2024-06-25,322,P002,Laptop Backpack,60
+2024-06-25,323,P003,Bluetooth Speaker,50
+2024-06-25,324,P002,Laptop Backpack,60
+2024-06-25,325,P001,Wireless Headphones,100
+2024-06-25,326,P010,External Hard Drive,100
+2024-06-25,327,P003,Bluetooth Speaker,50
+2024-06-25,328,P002,Laptop Backpack,60
+2024-06-25,329,P008,HDMI Cable,15
+2024-06-25,330,P006,Wireless Mouse,30
+2024-06-25,331,P004,USB Flash Drive,20
+2024-06-25,332,P001,Wireless Headphones,100
+2024-06-25,333,P001,Wireless Headphones,100
+2024-06-25,334,P008,HDMI Cable,15
+2024-06-25,335,P009,Smartphone,600
+2024-06-25,336,P006,Wireless Mouse,30
+2024-06-25,337,P006,Wireless Mouse,30
+2024-06-25,338,P010,External Hard Drive,100
+2024-06-25,339,P007,Laptop Stand,40
+2024-06-25,340,P004,USB Flash Drive,20
+2024-06-25,341,P008,HDMI Cable,15
+2024-06-25,342,P010,External Hard Drive,100
+2024-06-25,343,P002,Laptop Backpack,60
+2024-06-25,344,P010,External Hard Drive,100
+2024-06-25,345,P007,Laptop Stand,40
+2024-06-25,346,P010,External Hard Drive,100
+2024-06-25,347,P003,Bluetooth Speaker,50
+2024-06-25,348,P002,Laptop Backpack,60
+2024-06-25,349,P005,Mobile Phone Case,15
+2024-06-25,350,P010,External Hard Drive,100
+2024-06-25,351,P001,Wireless Headphones,100
+2024-06-25,352,P006,Wireless Mouse,30
+2024-06-25,353,P001,Wireless Headphones,100
+2024-06-25,354,P008,HDMI Cable,15
+2024-06-25,355,P001,Wireless Headphones,100
+2024-06-25,356,P006,Wireless Mouse,30
+2024-06-25,357,P008,HDMI Cable,15
+2024-06-25,358,P006,Wireless Mouse,30
+2024-06-25,359,P002,Laptop Backpack,60
+2024-06-25,360,P008,HDMI Cable,15
+2024-06-25,361,P002,Laptop Backpack,60
+2024-06-25,362,P008,HDMI Cable,15
+2024-06-25,363,P006,Wireless Mouse,30
+2024-06-25,364,P004,USB Flash Drive,20
+2024-06-25,365,P008,HDMI Cable,15
+2024-06-25,366,P004,USB Flash Drive,20
+2024-06-25,367,P006,Wireless Mouse,30
+2024-06-25,368,P001,Wireless Headphones,100
+2024-06-25,369,P006,Wireless Mouse,30
+2024-06-25,370,P004,USB Flash Drive,20
+2024-06-25,371,P001,Wireless Headphones,100
+2024-06-25,372,P004,USB Flash Drive,20
+2024-06-25,373,P008,HDMI Cable,15
+2024-06-25,374,P005,Mobile Phone Case,15
+2024-06-25,375,P002,Laptop Backpack,60
+2024-06-25,376,P009,Smartphone,600
+2024-06-25,377,P010,External Hard Drive,100
+2024-06-25,378,P004,USB Flash Drive,20
+2024-06-25,379,P004,USB Flash Drive,20
+2024-06-25,380,P001,Wireless Headphones,100
+2024-06-25,381,P006,Wireless Mouse,30
+2024-06-25,382,P005,Mobile Phone Case,15
+2024-06-25,383,P001,Wireless Headphones,100
+2024-06-25,384,P006,Wireless Mouse,30
+2024-06-25,385,P003,Bluetooth Speaker,50
+2024-06-25,386,P008,HDMI Cable,15
+2024-06-25,387,P001,Wireless Headphones,100
+2024-06-25,388,P006,Wireless Mouse,30
+2024-06-25,389,P003,Bluetooth Speaker,50
+2024-06-25,390,P001,Wireless Headphones,100
+2024-06-25,391,P002,Laptop Backpack,60
+2024-06-25,392,P007,Laptop Stand,40
+2024-06-25,393,P006,Wireless Mouse,30
+2024-06-25,394,P009,Smartphone,600
+2024-06-25,395,P001,Wireless Headphones,100
+2024-06-25,396,P007,Laptop Stand,40
+2024-06-25,397,P004,USB Flash Drive,20
+2024-06-25,398,P004,USB Flash Drive,20
+2024-06-25,399,P001,Wireless Headphones,100
+2024-06-25,400,P008,HDMI Cable,15
+2024-06-25,401,P006,Wireless Mouse,30
+2024-06-25,402,P003,Bluetooth Speaker,50
+2024-06-25,403,P004,USB Flash Drive,20
+2024-06-25,404,P010,External Hard Drive,100
+2024-06-25,405,P002,Laptop Backpack,60
+2024-06-25,406,P001,Wireless Headphones,100
+2024-06-25,407,P008,HDMI Cable,15
+2024-06-25,408,P010,External Hard Drive,100
+2024-06-25,409,P004,USB Flash Drive,20
+2024-06-25,410,P001,Wireless Headphones,100
+2024-06-25,411,P004,USB Flash Drive,20
+2024-06-25,412,P006,Wireless Mouse,30
+2024-06-25,413,P002,Laptop Backpack,60
+2024-06-25,414,P007,Laptop Stand,40
+2024-06-25,415,P003,Bluetooth Speaker,50
+2024-06-25,416,P003,Bluetooth Speaker,50
+2024-06-25,417,P004,USB Flash Drive,20
+2024-06-25,418,P004,USB Flash Drive,20
+2024-06-25,419,P010,External Hard Drive,100
+2024-06-25,420,P010,External Hard Drive,100
+2024-06-25,421,P004,USB Flash Drive,20
+2024-06-25,422,P001,Wireless Headphones,100
+2024-06-25,423,P002,Laptop Backpack,60
+2024-06-25,424,P001,Wireless Headphones,100
+2024-06-25,425,P010,External Hard Drive,100
+2024-06-25,426,P007,Laptop Stand,40
+2024-06-25,427,P008,HDMI Cable,15
+2024-06-25,428,P006,Wireless Mouse,30
+2024-06-25,429,P005,Mobile Phone Case,15
+2024-06-25,430,P003,Bluetooth Speaker,50
+2024-06-25,431,P001,Wireless Headphones,100
+2024-06-25,432,P001,Wireless Headphones,100
+2024-06-25,433,P009,Smartphone,600
+2024-06-25,434,P005,Mobile Phone Case,15
+2024-06-25,435,P006,Wireless Mouse,30
+2024-06-25,436,P001,Wireless Headphones,100
+2024-06-25,437,P001,Wireless Headphones,100
+2024-06-25,438,P001,Wireless Headphones,100
+2024-06-25,439,P003,Bluetooth Speaker,50
+2024-06-25,440,P001,Wireless Headphones,100
+2024-06-25,441,P004,USB Flash Drive,20
+2024-06-25,442,P003,Bluetooth Speaker,50
+2024-06-25,443,P004,USB Flash Drive,20
+2024-06-25,444,P001,Wireless Headphones,100
+2024-06-25,445,P002,Laptop Backpack,60
+2024-06-25,446,P003,Bluetooth Speaker,50
+2024-06-25,447,P006,Wireless Mouse,30
+2024-06-25,448,P003,Bluetooth Speaker,50
+2024-06-25,449,P001,Wireless Headphones,100
+2024-06-25,450,P004,USB Flash Drive,20
+2024-06-25,451,P001,Wireless Headphones,100
+2024-06-25,452,P006,Wireless Mouse,30
+2024-06-25,453,P003,Bluetooth Speaker,50
+2024-06-25,454,P003,Bluetooth Speaker,50
+2024-06-25,455,P001,Wireless Headphones,100
+2024-06-25,456,P001,Wireless Headphones,100
+2024-06-25,457,P001,Wireless Headphones,100
+2024-06-25,458,P004,USB Flash Drive,20
+2024-06-25,459,P008,HDMI Cable,15
+2024-06-25,460,P001,Wireless Headphones,100
+2024-06-25,461,P003,Bluetooth Speaker,50
+2024-06-25,462,P009,Smartphone,600
+2024-06-25,463,P006,Wireless Mouse,30
+2024-06-25,464,P010,External Hard Drive,100
+2024-06-25,465,P010,External Hard Drive,100
+2024-06-25,466,P004,USB Flash Drive,20
+2024-06-25,467,P006,Wireless Mouse,30
+2024-06-25,468,P006,Wireless Mouse,30
+2024-06-25,469,P001,Wireless Headphones,100
+2024-06-25,470,P004,USB Flash Drive,20
+2024-06-25,471,P008,HDMI Cable,15
+2024-06-25,472,P001,Wireless Headphones,100
+2024-06-25,473,P006,Wireless Mouse,30
+2024-06-25,474,P006,Wireless Mouse,30
+2024-06-25,475,P008,HDMI Cable,15
+2024-06-25,476,P001,Wireless Headphones,100
+2024-06-25,477,P001,Wireless Headphones,100
+2024-06-25,478,P002,Laptop Backpack,60
+2024-06-25,479,P001,Wireless Headphones,100
+2024-06-25,480,P001,Wireless Headphones,100
+2024-06-25,481,P008,HDMI Cable,15
+2024-06-25,482,P010,External Hard Drive,100
+2024-06-25,483,P001,Wireless Headphones,100
+2024-06-25,484,P008,HDMI Cable,15
+2024-06-25,485,P010,External Hard Drive,100
+2024-06-25,486,P010,External Hard Drive,100
+2024-06-25,487,P005,Mobile Phone Case,15
+2024-06-25,488,P008,HDMI Cable,15
+2024-06-25,489,P004,USB Flash Drive,20
+2024-06-25,490,P003,Bluetooth Speaker,50
+2024-06-25,491,P004,USB Flash Drive,20
+2024-06-25,492,P005,Mobile Phone Case,15
+2024-06-25,493,P004,USB Flash Drive,20
+2024-06-25,494,P009,Smartphone,600
+2024-06-25,495,P006,Wireless Mouse,30
+2024-06-25,496,P007,Laptop Stand,40
+2024-06-25,497,P009,Smartphone,600
+2024-06-25,498,P004,USB Flash Drive,20
+2024-06-25,499,P006,Wireless Mouse,30
+2024-06-25,500,P001,Wireless Headphones,100
+2024-06-25,501,P001,Wireless Headphones,100
+2024-06-25,502,P006,Wireless Mouse,30
+2024-06-25,503,P002,Laptop Backpack,60
+2024-06-25,504,P004,USB Flash Drive,20
+2024-06-25,505,P001,Wireless Headphones,100
+2024-06-25,506,P004,USB Flash Drive,20
+2024-06-25,507,P010,External Hard Drive,100
+2024-06-25,508,P003,Bluetooth Speaker,50
+2024-06-25,509,P001,Wireless Headphones,100
+2024-06-25,510,P006,Wireless Mouse,30
+2024-06-25,511,P004,USB Flash Drive,20
+2024-06-25,512,P009,Smartphone,600
+2024-06-25,513,P004,USB Flash Drive,20
+2024-06-25,514,P006,Wireless Mouse,30
+2024-06-25,515,P010,External Hard Drive,100
+2024-06-25,516,P001,Wireless Headphones,100
+2024-06-25,517,P006,Wireless Mouse,30
+2024-06-25,518,P010,External Hard Drive,100
+2024-06-25,519,P006,Wireless Mouse,30
+2024-06-25,520,P006,Wireless Mouse,30
+2024-06-25,521,P001,Wireless Headphones,100
+2024-06-25,522,P001,Wireless Headphones,100
+2024-06-25,523,P003,Bluetooth Speaker,50
+2024-06-25,524,P002,Laptop Backpack,60
+2024-06-25,525,P001,Wireless Headphones,100
+2024-06-25,526,P003,Bluetooth Speaker,50
+2024-06-25,527,P003,Bluetooth Speaker,50
+2024-06-25,528,P006,Wireless Mouse,30
+2024-06-25,529,P001,Wireless Headphones,100
+2024-06-25,530,P006,Wireless Mouse,30
+2024-06-25,531,P008,HDMI Cable,15
+2024-06-25,532,P010,External Hard Drive,100
+2024-06-25,533,P004,USB Flash Drive,20
+2024-06-25,534,P003,Bluetooth Speaker,50
+2024-06-25,535,P001,Wireless Headphones,100
+2024-06-25,536,P008,HDMI Cable,15
+2024-06-25,537,P004,USB Flash Drive,20
+2024-06-25,538,P006,Wireless Mouse,30
+2024-06-25,539,P001,Wireless Headphones,100
+2024-06-25,540,P003,Bluetooth Speaker,50
+2024-06-25,541,P002,Laptop Backpack,60
+2024-06-25,542,P001,Wireless Headphones,100
+2024-06-25,543,P010,External Hard Drive,100
+2024-06-25,544,P002,Laptop Backpack,60
+2024-06-25,545,P006,Wireless Mouse,30
+2024-06-25,546,P002,Laptop Backpack,60
+2024-06-25,547,P008,HDMI Cable,15
+2024-06-25,548,P002,Laptop Backpack,60
+2024-06-25,549,P001,Wireless Headphones,100
+2024-06-25,550,P003,Bluetooth Speaker,50
+2024-06-25,551,P005,Mobile Phone Case,15
+2024-06-25,552,P002,Laptop Backpack,60
+2024-06-25,553,P002,Laptop Backpack,60
+2024-06-25,554,P006,Wireless Mouse,30
+2024-06-25,555,P007,Laptop Stand,40
+2024-06-25,556,P001,Wireless Headphones,100
+2024-06-25,557,P004,USB Flash Drive,20
+2024-06-25,558,P010,External Hard Drive,100
+2024-06-25,559,P006,Wireless Mouse,30
+2024-06-25,560,P005,Mobile Phone Case,15
+2024-06-25,561,P002,Laptop Backpack,60
+2024-06-25,562,P004,USB Flash Drive,20
+2024-06-25,563,P007,Laptop Stand,40
+2024-06-25,564,P006,Wireless Mouse,30
+2024-06-25,565,P001,Wireless Headphones,100
+2024-06-25,566,P010,External Hard Drive,100
+2024-06-25,567,P001,Wireless Headphones,100
+2024-06-25,568,P002,Laptop Backpack,60
+2024-06-25,569,P008,HDMI Cable,15
+2024-06-25,570,P006,Wireless Mouse,30
+2024-06-25,571,P001,Wireless Headphones,100
+2024-06-25,572,P006,Wireless Mouse,30
+2024-06-25,573,P004,USB Flash Drive,20
+2024-06-25,574,P010,External Hard Drive,100
+2024-06-25,575,P010,External Hard Drive,100
+2024-06-25,576,P008,HDMI Cable,15
+2024-06-25,577,P008,HDMI Cable,15
+2024-06-25,578,P007,Laptop Stand,40
+2024-06-25,579,P004,USB Flash Drive,20
+2024-06-25,580,P007,Laptop Stand,40
+2024-06-25,581,P001,Wireless Headphones,100
+2024-06-25,582,P006,Wireless Mouse,30
+2024-06-25,583,P004,USB Flash Drive,20
+2024-06-25,584,P010,External Hard Drive,100
+2024-06-25,585,P010,External Hard Drive,100
+2024-06-25,586,P007,Laptop Stand,40
+2024-06-25,587,P001,Wireless Headphones,100
+2024-06-25,588,P007,Laptop Stand,40
+2024-06-25,589,P004,USB Flash Drive,20
+2024-06-25,590,P006,Wireless Mouse,30
+2024-06-25,591,P006,Wireless Mouse,30
+2024-06-25,592,P003,Bluetooth Speaker,50
+2024-06-25,593,P006,Wireless Mouse,30
+2024-06-25,594,P001,Wireless Headphones,100
+2024-06-25,595,P001,Wireless Headphones,100
+2024-06-25,596,P006,Wireless Mouse,30
+2024-06-25,597,P010,External Hard Drive,100
+2024-06-25,598,P006,Wireless Mouse,30
+2024-06-25,599,P008,HDMI Cable,15
+2024-06-25,600,P008,HDMI Cable,15
+2024-06-25,601,P006,Wireless Mouse,30
+2024-06-25,602,P005,Mobile Phone Case,15
+2024-06-25,603,P002,Laptop Backpack,60
+2024-06-25,604,P004,USB Flash Drive,20
+2024-06-25,605,P009,Smartphone,600
+2024-06-25,606,P010,External Hard Drive,100
+2024-06-25,607,P010,External Hard Drive,100
+2024-06-25,608,P002,Laptop Backpack,60
+2024-06-25,609,P001,Wireless Headphones,100
+2024-06-25,610,P001,Wireless Headphones,100
+2024-06-25,611,P006,Wireless Mouse,30
+2024-06-25,612,P001,Wireless Headphones,100
+2024-06-25,613,P007,Laptop Stand,40
+2024-06-25,614,P003,Bluetooth Speaker,50
+2024-06-25,615,P001,Wireless Headphones,100
+2024-06-25,616,P010,External Hard Drive,100
+2024-06-25,617,P010,External Hard Drive,100
+2024-06-25,618,P001,Wireless Headphones,100
+2024-06-25,619,P004,USB Flash Drive,20
+2024-06-25,620,P006,Wireless Mouse,30
+2024-06-25,621,P008,HDMI Cable,15
+2024-06-25,622,P001,Wireless Headphones,100
+2024-06-25,623,P010,External Hard Drive,100
+2024-06-25,624,P009,Smartphone,600
+2024-06-25,625,P004,USB Flash Drive,20
+2024-06-25,626,P003,Bluetooth Speaker,50
+2024-06-25,627,P002,Laptop Backpack,60
+2024-06-25,628,P003,Bluetooth Speaker,50
+2024-06-25,629,P010,External Hard Drive,100
+2024-06-25,630,P004,USB Flash Drive,20
+2024-06-25,631,P002,Laptop Backpack,60
+2024-06-25,632,P003,Bluetooth Speaker,50
+2024-06-25,633,P009,Smartphone,600
+2024-06-25,634,P010,External Hard Drive,100
+2024-06-25,635,P006,Wireless Mouse,30
+2024-06-25,636,P008,HDMI Cable,15
+2024-06-25,637,P003,Bluetooth Speaker,50
+2024-06-25,638,P002,Laptop Backpack,60
+2024-06-25,639,P004,USB Flash Drive,20
+2024-06-25,640,P002,Laptop Backpack,60
+2024-06-25,641,P001,Wireless Headphones,100
+2024-06-25,642,P007,Laptop Stand,40
+2024-06-25,643,P006,Wireless Mouse,30
+2024-06-25,644,P002,Laptop Backpack,60
+2024-06-25,645,P008,HDMI Cable,15
+2024-06-25,646,P008,HDMI Cable,15
+2024-06-25,647,P008,HDMI Cable,15
+2024-06-25,648,P008,HDMI Cable,15
+2024-06-25,649,P008,HDMI Cable,15
+2024-06-25,650,P002,Laptop Backpack,60
+2024-06-25,651,P010,External Hard Drive,100
+2024-06-25,652,P004,USB Flash Drive,20
+2024-06-25,653,P002,Laptop Backpack,60
+2024-06-25,654,P010,External Hard Drive,100
+2024-06-25,655,P006,Wireless Mouse,30
+2024-06-25,656,P001,Wireless Headphones,100
+2024-06-25,657,P010,External Hard Drive,100
+2024-06-25,658,P009,Smartphone,600
+2024-06-25,659,P001,Wireless Headphones,100
+2024-06-25,660,P010,External Hard Drive,100
+2024-06-25,661,P004,USB Flash Drive,20
+2024-06-25,662,P006,Wireless Mouse,30
+2024-06-25,663,P004,USB Flash Drive,20
+2024-06-25,664,P004,USB Flash Drive,20
+2024-06-25,665,P001,Wireless Headphones,100
+2024-06-25,666,P004,USB Flash Drive,20
+2024-06-25,667,P004,USB Flash Drive,20
+2024-06-25,668,P004,USB Flash Drive,20
+2024-06-25,669,P004,USB Flash Drive,20
+2024-06-25,670,P005,Mobile Phone Case,15
+2024-06-25,671,P003,Bluetooth Speaker,50
+2024-06-25,672,P007,Laptop Stand,40
+2024-06-25,673,P001,Wireless Headphones,100
+2024-06-25,674,P004,USB Flash Drive,20
+2024-06-25,675,P006,Wireless Mouse,30
+2024-06-25,676,P010,External Hard Drive,100
+2024-06-25,677,P003,Bluetooth Speaker,50
+2024-06-25,678,P001,Wireless Headphones,100
+2024-06-25,679,P008,HDMI Cable,15
+2024-06-25,680,P008,HDMI Cable,15
+2024-06-25,681,P001,Wireless Headphones,100
+2024-06-25,682,P008,HDMI Cable,15
+2024-06-25,683,P007,Laptop Stand,40
+2024-06-25,684,P002,Laptop Backpack,60
+2024-06-25,685,P010,External Hard Drive,100
+2024-06-25,686,P001,Wireless Headphones,100
+2024-06-25,687,P006,Wireless Mouse,30
+2024-06-25,688,P010,External Hard Drive,100
+2024-06-25,689,P005,Mobile Phone Case,15
+2024-06-25,690,P004,USB Flash Drive,20
+2024-06-25,691,P002,Laptop Backpack,60
+2024-06-25,692,P004,USB Flash Drive,20
+2024-06-25,693,P002,Laptop Backpack,60
+2024-06-25,694,P002,Laptop Backpack,60
+2024-06-25,695,P010,External Hard Drive,100
+2024-06-25,696,P007,Laptop Stand,40
+2024-06-25,697,P008,HDMI Cable,15
+2024-06-25,698,P001,Wireless Headphones,100
+2024-06-25,699,P009,Smartphone,600
+2024-06-25,700,P001,Wireless Headphones,100
+2024-06-25,701,P008,HDMI Cable,15
+2024-06-25,702,P006,Wireless Mouse,30
+2024-06-25,703,P004,USB Flash Drive,20
+2024-06-25,704,P001,Wireless Headphones,100
+2024-06-25,705,P001,Wireless Headphones,100
+2024-06-25,706,P006,Wireless Mouse,30
+2024-06-25,707,P001,Wireless Headphones,100
+2024-06-25,708,P006,Wireless Mouse,30
+2024-06-25,709,P004,USB Flash Drive,20
+2024-06-25,710,P009,Smartphone,600
+2024-06-25,711,P004,USB Flash Drive,20
+2024-06-25,712,P001,Wireless Headphones,100
+2024-06-25,713,P010,External Hard Drive,100
+2024-06-25,714,P006,Wireless Mouse,30
+2024-06-25,715,P010,External Hard Drive,100
+2024-06-25,716,P008,HDMI Cable,15
+2024-06-25,717,P004,USB Flash Drive,20
+2024-06-25,718,P001,Wireless Headphones,100
+2024-06-25,719,P007,Laptop Stand,40
+2024-06-25,720,P001,Wireless Headphones,100
+2024-06-25,721,P004,USB Flash Drive,20
+2024-06-25,722,P009,Smartphone,600
+2024-06-25,723,P004,USB Flash Drive,20
+2024-06-25,724,P001,Wireless Headphones,100
+2024-06-25,725,P008,HDMI Cable,15
+2024-06-25,726,P001,Wireless Headphones,100
+2024-06-25,727,P008,HDMI Cable,15
+2024-06-25,728,P004,USB Flash Drive,20
+2024-06-25,729,P010,External Hard Drive,100
+2024-06-25,730,P007,Laptop Stand,40
+2024-06-25,731,P005,Mobile Phone Case,15
+2024-06-25,732,P010,External Hard Drive,100
+2024-06-25,733,P006,Wireless Mouse,30
+2024-06-25,734,P002,Laptop Backpack,60
+2024-06-25,735,P001,Wireless Headphones,100
+2024-06-25,736,P004,USB Flash Drive,20
+2024-06-25,737,P006,Wireless Mouse,30
+2024-06-25,738,P002,Laptop Backpack,60
+2024-06-25,739,P010,External Hard Drive,100
+2024-06-25,740,P008,HDMI Cable,15
+2024-06-25,741,P006,Wireless Mouse,30
+2024-06-25,742,P010,External Hard Drive,100
+2024-06-25,743,P008,HDMI Cable,15
+2024-06-25,744,P006,Wireless Mouse,30
+2024-06-25,745,P004,USB Flash Drive,20
+2024-06-25,746,P004,USB Flash Drive,20
+2024-06-25,747,P006,Wireless Mouse,30
+2024-06-25,748,P001,Wireless Headphones,100
+2024-06-25,749,P010,External Hard Drive,100
+2024-06-25,750,P005,Mobile Phone Case,15
+2024-06-25,751,P002,Laptop Backpack,60
+2024-06-25,752,P004,USB Flash Drive,20
+2024-06-25,753,P004,USB Flash Drive,20
+2024-06-25,754,P001,Wireless Headphones,100
+2024-06-25,755,P001,Wireless Headphones,100
+2024-06-25,756,P003,Bluetooth Speaker,50
+2024-06-25,757,P010,External Hard Drive,100
+2024-06-25,758,P001,Wireless Headphones,100
+2024-06-25,759,P003,Bluetooth Speaker,50
+2024-06-25,760,P005,Mobile Phone Case,15
+2024-06-25,761,P006,Wireless Mouse,30
+2024-06-25,762,P008,HDMI Cable,15
+2024-06-25,763,P008,HDMI Cable,15
+2024-06-25,764,P002,Laptop Backpack,60
+2024-06-25,765,P002,Laptop Backpack,60
+2024-06-25,766,P004,USB Flash Drive,20
+2024-06-25,767,P008,HDMI Cable,15
+2024-06-25,768,P004,USB Flash Drive,20
+2024-06-25,769,P003,Bluetooth Speaker,50
+2024-06-25,770,P002,Laptop Backpack,60
+2024-06-25,771,P005,Mobile Phone Case,15
+2024-06-25,772,P001,Wireless Headphones,100
+2024-06-25,773,P001,Wireless Headphones,100
+2024-06-25,774,P008,HDMI Cable,15
+2024-06-25,775,P006,Wireless Mouse,30
+2024-06-25,776,P008,HDMI Cable,15
+2024-06-25,777,P002,Laptop Backpack,60
+2024-06-25,778,P005,Mobile Phone Case,15
+2024-06-25,779,P008,HDMI Cable,15
+2024-06-25,780,P002,Laptop Backpack,60
+2024-06-25,781,P005,Mobile Phone Case,15
+2024-06-25,782,P007,Laptop Stand,40
+2024-06-25,783,P002,Laptop Backpack,60
+2024-06-25,784,P010,External Hard Drive,100
+2024-06-25,785,P008,HDMI Cable,15
+2024-06-25,786,P008,HDMI Cable,15
+2024-06-25,787,P001,Wireless Headphones,100
+2024-06-25,788,P006,Wireless Mouse,30
+2024-06-25,789,P006,Wireless Mouse,30
+2024-06-25,790,P010,External Hard Drive,100
+2024-06-25,791,P001,Wireless Headphones,100
+2024-06-25,792,P003,Bluetooth Speaker,50
+2024-06-25,793,P009,Smartphone,600
+2024-06-25,794,P009,Smartphone,600
+2024-06-25,795,P009,Smartphone,600
+2024-06-25,796,P001,Wireless Headphones,100
+2024-06-25,797,P004,USB Flash Drive,20
+2024-06-25,798,P008,HDMI Cable,15
+2024-06-25,799,P010,External Hard Drive,100
+2024-06-25,800,P009,Smartphone,600
+2024-06-25,801,P008,HDMI Cable,15
+2024-06-25,802,P010,External Hard Drive,100
+2024-06-25,803,P004,USB Flash Drive,20
+2024-06-25,804,P010,External Hard Drive,100
+2024-06-25,805,P002,Laptop Backpack,60
+2024-06-25,806,P005,Mobile Phone Case,15
+2024-06-25,807,P008,HDMI Cable,15
+2024-06-25,808,P009,Smartphone,600
+2024-06-25,809,P004,USB Flash Drive,20
+2024-06-25,810,P008,HDMI Cable,15
+2024-06-25,811,P004,USB Flash Drive,20
+2024-06-25,812,P006,Wireless Mouse,30
+2024-06-25,813,P002,Laptop Backpack,60
+2024-06-25,814,P008,HDMI Cable,15
+2024-06-25,815,P001,Wireless Headphones,100
+2024-06-25,816,P008,HDMI Cable,15
+2024-06-25,817,P007,Laptop Stand,40
+2024-06-25,818,P004,USB Flash Drive,20
+2024-06-25,819,P008,HDMI Cable,15
+2024-06-25,820,P001,Wireless Headphones,100
+2024-06-25,821,P006,Wireless Mouse,30
+2024-06-25,822,P003,Bluetooth Speaker,50
+2024-06-25,823,P004,USB Flash Drive,20
+2024-06-25,824,P006,Wireless Mouse,30
+2024-06-25,825,P004,USB Flash Drive,20
+2024-06-25,826,P008,HDMI Cable,15
+2024-06-25,827,P006,Wireless Mouse,30
+2024-06-25,828,P006,Wireless Mouse,30
+2024-06-25,829,P010,External Hard Drive,100
+2024-06-25,830,P004,USB Flash Drive,20
+2024-06-25,831,P006,Wireless Mouse,30
+2024-06-25,832,P006,Wireless Mouse,30
+2024-06-25,833,P006,Wireless Mouse,30
+2024-06-25,834,P002,Laptop Backpack,60
+2024-06-25,835,P009,Smartphone,600
+2024-06-25,836,P001,Wireless Headphones,100
+2024-06-25,837,P010,External Hard Drive,100
+2024-06-25,838,P005,Mobile Phone Case,15
+2024-06-25,839,P010,External Hard Drive,100
+2024-06-25,840,P001,Wireless Headphones,100
+2024-06-25,841,P001,Wireless Headphones,100
+2024-06-25,842,P007,Laptop Stand,40
+2024-06-25,843,P001,Wireless Headphones,100
+2024-06-25,844,P001,Wireless Headphones,100
+2024-06-25,845,P006,Wireless Mouse,30
+2024-06-25,846,P010,External Hard Drive,100
+2024-06-25,847,P006,Wireless Mouse,30
+2024-06-25,848,P006,Wireless Mouse,30
+2024-06-25,849,P001,Wireless Headphones,100
+2024-06-25,850,P002,Laptop Backpack,60
+2024-06-25,851,P006,Wireless Mouse,30
+2024-06-25,852,P006,Wireless Mouse,30
+2024-06-25,853,P002,Laptop Backpack,60
+2024-06-25,854,P010,External Hard Drive,100
+2024-06-25,855,P008,HDMI Cable,15
+2024-06-25,856,P001,Wireless Headphones,100
+2024-06-25,857,P002,Laptop Backpack,60
+2024-06-25,858,P010,External Hard Drive,100
+2024-06-25,859,P004,USB Flash Drive,20
+2024-06-25,860,P005,Mobile Phone Case,15
+2024-06-25,861,P001,Wireless Headphones,100
+2024-06-25,862,P004,USB Flash Drive,20
+2024-06-25,863,P008,HDMI Cable,15
+2024-06-25,864,P009,Smartphone,600
+2024-06-25,865,P009,Smartphone,600
+2024-06-25,866,P004,USB Flash Drive,20
+2024-06-25,867,P002,Laptop Backpack,60
+2024-06-25,868,P007,Laptop Stand,40
+2024-06-25,869,P008,HDMI Cable,15
+2024-06-25,870,P010,External Hard Drive,100
+2024-06-25,871,P006,Wireless Mouse,30
+2024-06-25,872,P010,External Hard Drive,100
+2024-06-25,873,P001,Wireless Headphones,100
+2024-06-25,874,P001,Wireless Headphones,100
+2024-06-25,875,P002,Laptop Backpack,60
+2024-06-25,876,P007,Laptop Stand,40
+2024-06-25,877,P002,Laptop Backpack,60
+2024-06-25,878,P006,Wireless Mouse,30
+2024-06-25,879,P006,Wireless Mouse,30
+2024-06-25,880,P005,Mobile Phone Case,15
+2024-06-25,881,P004,USB Flash Drive,20
+2024-06-25,882,P010,External Hard Drive,100
+2024-06-25,883,P007,Laptop Stand,40
+2024-06-25,884,P005,Mobile Phone Case,15
+2024-06-25,885,P002,Laptop Backpack,60
+2024-06-25,886,P010,External Hard Drive,100
+2024-06-25,887,P004,USB Flash Drive,20
+2024-06-25,888,P004,USB Flash Drive,20
+2024-06-25,889,P001,Wireless Headphones,100
+2024-06-25,890,P005,Mobile Phone Case,15
+2024-06-25,891,P004,USB Flash Drive,20
+2024-06-25,892,P004,USB Flash Drive,20
+2024-06-25,893,P010,External Hard Drive,100
+2024-06-25,894,P004,USB Flash Drive,20
+2024-06-25,895,P009,Smartphone,600
+2024-06-25,896,P005,Mobile Phone Case,15
+2024-06-25,897,P009,Smartphone,600
+2024-06-25,898,P007,Laptop Stand,40
+2024-06-25,899,P005,Mobile Phone Case,15
+2024-06-25,900,P004,USB Flash Drive,20
+2024-06-25,901,P003,Bluetooth Speaker,50
+2024-06-25,902,P001,Wireless Headphones,100
+2024-06-25,903,P003,Bluetooth Speaker,50
+2024-06-25,904,P001,Wireless Headphones,100
+2024-06-25,905,P001,Wireless Headphones,100
+2024-06-25,906,P004,USB Flash Drive,20
+2024-06-25,907,P006,Wireless Mouse,30
+2024-06-25,908,P003,Bluetooth Speaker,50
+2024-06-25,909,P002,Laptop Backpack,60
+2024-06-25,910,P001,Wireless Headphones,100
+2024-06-25,911,P003,Bluetooth Speaker,50
+2024-06-25,912,P008,HDMI Cable,15
+2024-06-25,913,P010,External Hard Drive,100
+2024-06-25,914,P004,USB Flash Drive,20
+2024-06-25,915,P008,HDMI Cable,15
+2024-06-25,916,P002,Laptop Backpack,60
+2024-06-25,917,P006,Wireless Mouse,30
+2024-06-25,918,P006,Wireless Mouse,30
+2024-06-25,919,P002,Laptop Backpack,60
+2024-06-25,920,P010,External Hard Drive,100
+2024-06-25,921,P008,HDMI Cable,15
+2024-06-25,922,P009,Smartphone,600
+2024-06-25,923,P008,HDMI Cable,15
+2024-06-25,924,P005,Mobile Phone Case,15
+2024-06-25,925,P004,USB Flash Drive,20
+2024-06-25,926,P001,Wireless Headphones,100
+2024-06-25,927,P002,Laptop Backpack,60
+2024-06-25,928,P002,Laptop Backpack,60
+2024-06-25,929,P004,USB Flash Drive,20
+2024-06-25,930,P004,USB Flash Drive,20
+2024-06-25,931,P002,Laptop Backpack,60
+2024-06-25,932,P006,Wireless Mouse,30
+2024-06-25,933,P004,USB Flash Drive,20
+2024-06-25,934,P010,External Hard Drive,100
+2024-06-25,935,P006,Wireless Mouse,30
+2024-06-25,936,P003,Bluetooth Speaker,50
+2024-06-25,937,P001,Wireless Headphones,100
+2024-06-25,938,P010,External Hard Drive,100
+2024-06-25,939,P009,Smartphone,600
+2024-06-25,940,P001,Wireless Headphones,100
+2024-06-25,941,P010,External Hard Drive,100
+2024-06-25,942,P001,Wireless Headphones,100
+2024-06-25,943,P001,Wireless Headphones,100
+2024-06-25,944,P001,Wireless Headphones,100
+2024-06-25,945,P004,USB Flash Drive,20
+2024-06-25,946,P004,USB Flash Drive,20
+2024-06-25,947,P010,External Hard Drive,100
+2024-06-25,948,P006,Wireless Mouse,30
+2024-06-25,949,P004,USB Flash Drive,20
+2024-06-25,950,P008,HDMI Cable,15
+2024-06-25,951,P003,Bluetooth Speaker,50
+2024-06-25,952,P004,USB Flash Drive,20
+2024-06-25,953,P008,HDMI Cable,15
+2024-06-25,954,P005,Mobile Phone Case,15
+2024-06-25,955,P006,Wireless Mouse,30
+2024-06-25,956,P001,Wireless Headphones,100
+2024-06-25,957,P006,Wireless Mouse,30
+2024-06-25,958,P004,USB Flash Drive,20
+2024-06-25,959,P002,Laptop Backpack,60
+2024-06-25,960,P006,Wireless Mouse,30
+2024-06-25,961,P003,Bluetooth Speaker,50
+2024-06-25,962,P003,Bluetooth Speaker,50
+2024-06-25,963,P005,Mobile Phone Case,15
+2024-06-25,964,P009,Smartphone,600
+2024-06-25,965,P007,Laptop Stand,40
+2024-06-25,966,P004,USB Flash Drive,20
+2024-06-25,967,P009,Smartphone,600
+2024-06-25,968,P003,Bluetooth Speaker,50
+2024-06-25,969,P008,HDMI Cable,15
+2024-06-25,970,P004,USB Flash Drive,20
+2024-06-25,971,P004,USB Flash Drive,20
+2024-06-25,972,P001,Wireless Headphones,100
+2024-06-25,973,P003,Bluetooth Speaker,50
+2024-06-25,974,P001,Wireless Headphones,100
+2024-06-25,975,P002,Laptop Backpack,60
+2024-06-25,976,P006,Wireless Mouse,30
+2024-06-25,977,P004,USB Flash Drive,20
+2024-06-25,978,P003,Bluetooth Speaker,50
+2024-06-25,979,P010,External Hard Drive,100
+2024-06-25,980,P010,External Hard Drive,100
+2024-06-25,981,P004,USB Flash Drive,20
+2024-06-25,982,P008,HDMI Cable,15
+2024-06-25,983,P002,Laptop Backpack,60
+2024-06-25,984,P003,Bluetooth Speaker,50
+2024-06-25,985,P010,External Hard Drive,100
+2024-06-25,986,P002,Laptop Backpack,60
+2024-06-25,987,P002,Laptop Backpack,60
+2024-06-25,988,P001,Wireless Headphones,100
+2024-06-25,989,P001,Wireless Headphones,100
+2024-06-25,990,P006,Wireless Mouse,30
+2024-06-25,991,P002,Laptop Backpack,60
+2024-06-25,992,P004,USB Flash Drive,20
+2024-06-25,993,P006,Wireless Mouse,30
+2024-06-25,994,P001,Wireless Headphones,100
+2024-06-25,995,P005,Mobile Phone Case,15
+2024-06-25,996,P006,Wireless Mouse,30
+2024-06-25,997,P006,Wireless Mouse,30
+2024-06-25,998,P004,USB Flash Drive,20
+2024-06-25,999,P001,Wireless Headphones,100
+2024-06-25,1000,P006,Wireless Mouse,30
+2024-06-25,1001,P001,Wireless Headphones,100

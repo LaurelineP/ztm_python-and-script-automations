@@ -48,6 +48,7 @@ def run(input_path, output_path=''):
                 PRODUCTS_MAPPING[product_id]['price']
             ]
             csv_writer.writerow(row)
+    print(f'--- File processed {output_path}\n')
 
     # ---------------------------------- READING --------------------------------- #
     # input_path = os.path.realpath(f'../{input_path}')

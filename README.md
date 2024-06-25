@@ -1,4 +1,6 @@
 # Python
+## Resources ( zip )
+https://cdn.fs.teachablecdn.com/cBpbX3XSyqrkGLkBD1q0
 ## 📌 Terminal / Shell / Python Shell
 Terminal - Allows you to run commands and also your programs.
 There are other ways to execute code such as program in files.
@@ -854,3 +856,21 @@ path = Path(<path-string>)
 # deleting a folder and its content
 <path>.rmtree()
 ```
+
+### Project 
+[Project -  files and folder cleaner](./_02_path_and_folders/project__files_and_folder_cleaner/)
+Guideline
+- The folder that will be created "organized" which will contain the folders
+  - "csv_files",
+  - "text_files",
+  - "folders"
+- Run the command at the root level
+- `/to_clean__original/` folder - is a work directory containing a study case of a folder  
+disorganized
+- duplicate `/to_clean__original/` in order to work on that duplicated folder instead of the original one
+- In the terminal ( at the root level of the whole github repository ):
+  - `python main.py project paths`: launches the program and you'll be prompted   
+  to specify a path ( relative to the repository root level or absolute )
+  - provide the path of a folder you want to clean: copy the relative or absolute path
+  of the folder and paste it in the terminal where it has been asked
+- observe the folder and its content changed
