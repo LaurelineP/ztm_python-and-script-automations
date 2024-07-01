@@ -7,22 +7,18 @@
 
 import os
 
+
+# ---------------------------------------------------------------------------- #
 #                                    LOGGERS                                   #
 # ---------------------------------------------------------------------------- #
-
-
-def log_header(string, is_upper=True):
-    """ Generate header formatted - to identify a section for instance
+def gen_log(string, is_upper):
+    """Generate compounds to build a log
 
     Args:
-        string (str): header / title in comment
-        is_upper (bool, optional): Allows to control wether all the string is 
-        transformed or not. Defaults to True.
-
-    Returns:
-        str: header - block of lines to depict it as header
+        string (_type_): _description_
+        is_upper (bool): _description_
     """
-    # default constants
+        # default constants
     _line_length = 56
     _char = "="
     _char_spaces_num = 2
@@ -44,6 +40,62 @@ def log_header(string, is_upper=True):
     char_num = remainder - _char_spaces_num
     char_fill = _char * char_num
     full_line = _char * _line_length
+
+    return {
+        "char_fill": char_fill,
+        "full_line": full_line,
+        "string": _string,
+        "line_length": _line_length,
+        "char" : _char
+    }
+
+
+def log(string, is_upper=True):
+    """Log sub statement"""
+
+    # Gets building blocks
+    log_details = gen_log(string, is_upper)
+    full_line = log_details['full_line']
+    _string = log_details['string']
+    _line_length = log_details['line_length']
+    _char = log_details['char']
+
+    # Construct lines block
+    line_content = f'{_string}'
+    missing_char = _line_length - len(line_content)
+
+    half_space_line_count = missing_char // 2
+    half_space_line = " " * half_space_line_count
+    
+    line =  half_space_line + line_content
+    
+    block = f'\n\n{ full_line }\n{ line }\n'
+
+    print(block)
+    return line
+
+
+
+
+def log_header(string, is_upper=True):
+    """ Generate header formatted - to identify a section for instance
+
+    Args:
+        string (str): header / title in comment
+        is_upper (bool, optional): Allows to control wether all the string is 
+        transformed or not. Defaults to True.
+
+    Returns:
+        str: header - block of lines to depict it as header
+    """
+
+    # Gets building blocks
+    log_details = gen_log(string, is_upper)
+    char_fill = log_details['char_fill']
+    full_line = log_details['full_line']
+    _string = log_details['string']
+    _line_length = log_details['line_length']
+    _char = log_details['char']
 
     # Construct lines block
     line_content = f'{char_fill}  {_string}  {char_fill}'
@@ -82,6 +134,9 @@ def log_object(obj):
     print(print_msg_methods, details["methods"])
     return details
 
+
+
+    
 # ---------------------------------------------------------------------------- #
 #                                  FILE SYSTEM                                 #
 # ---------------------------------------------------------------------------- #
@@ -104,4 +159,5 @@ def get_curr_dir(this_file):
 # Instead of taking the context from the command execution
 # ( running on the terminal : `python _01_working_with_files/plain_text.py`
 # does not find the file as the context is from the project root )
+# """
 # """

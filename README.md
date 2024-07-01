@@ -874,3 +874,86 @@ disorganized
   - provide the path of a folder you want to clean: copy the relative or absolute path
   of the folder and paste it in the terminal where it has been asked
 - observe the folder and its content changed
+
+
+## 🔹 REGULAR EXPRESSIONS
+Regular expression is a standardized tools that all programming languages
+used - once learnt, the knowledge on this is reusable
+It is a syntax describing patterns in a text
+
+Website where we could try / test these pattern/
+
+[pythex](https://pythex.org/)
+
+## Basics
+
+- `\` this allows to escapes key characters / or key syntax
+- `.` this represents any kind of alphabetical character
+- plain text
+
+
+### Special Characters in Regexp
+`\d` this represents any digits (0-9)
+`\D` this represents any non digit character
+`\w` this represents any alpha numeric characters
+`\W` this represents any non alpha numeric characters
+`\s` this represents white space
+`\S` this represents non white space
+
+
+### Matching Multiple Characters
+Brackets allows to match groups of following characters
+
+- `[]` used to match any characters specified in-between matching character
+  - [a-z] used to match any lowercased letters / characters
+  - [A-Z] used to match any uppercased letters / characters
+  - [a-zA-Z] used to match any lowercased and uppercased letters / characters
+  - [^<ANY-CHARACTERS-OR-PATTERN]>: used to match all **except** the characters in-between the brackets
+- `()` used to match exact following characters and create a group
+
+
+### Quantifiers
+Represents the number of instances the pattern should match 
+`?` matches **zero** or **one** instance of the previous character
+`+` matches **one or more** instances of the previous character
+`*` matches **zero** or more instances of the previous character
+
+### Custom Quantifiers
+- `{<n>[, <n>]}` used as a quantifier - applied to the prepended pattern *n being a number*
+  - `a{2}`: examples matching a sequence of 2 following `a`
+  - `a{3,5}`: examples matching a sequence of 3 or 5 following `a` 
+  - a{2,}: examples matching a sequence of 2 and mor following `a` 
+
+### Anchors
+- `^` denotes the start of a string
+- `$` denotes the end of a string
+
+
+### Regular Expression in Python
+The built-in module `re` provides us with some interesting 
+tool to check a given string.
+
+`import re`
+
+Raw string to express the regexp 
+`r''` - raw string - write regexp pattern in a string
+
+### Library Methods
+- `.search( <REG>, <TEXT> )` >returns  None | Matched value - returning the first matched result
+- `.findall( <REG>, <TEXT> )` > returns a multiple values as a list of strings
+- `.sub(<REG>, <TEXT>, <REPLACEMENT-TXT>)` substitute found text with the string we pass
+
+
+#### Returned regexp methods
+- `.group()`: value found in the match return object
+- `.group(<n>)`: value of the regexp group defined value
+
+### Alternation or OR
+- Or operator with a pipe within a group
+`(cat|dog)` - regexp to say to match either "cat" or "dog"
+
+### Compilation flags
+- `IGNORECASE` flag: makes the matching case insensitive
+- `MULTILINE` flag: makes `^` and `$`  matching the entire lines rather than the entire string
+- `DOTALL`: makes the dot character match all character including new lines
+- ``
