@@ -38,7 +38,7 @@ def explore_search():
     matched2 = re.search(regxp, text).group(2)
     matched3 = re.search(regxp, text).group(3)
     print(f'\nText 3 - searching for a group and group indexes:\n\t "{text}"')
-    print(f'\t> Regexp value: "{regxp}')
+    print(f'\t> Regexp value: "{regxp}"')
     print(f'\t> Matched: "{matched}"')
     print(f'\t> Matched group 1: "{matched1}"')
     print(f'\t> Matched group 2: "{matched2}"')
@@ -54,7 +54,7 @@ def explore_findall():
      regxp = r'\d{4}'
      matched = re.findall(regxp, text)
      print(f'\nText 1 - searching for a group and group indexes:\n\t "{text}"')
-     print(f'\t> Regexp value: "{regxp}')
+     print(f'\t> Regexp value: "{regxp}"')
      print(f'\t> Matched: "{matched}"')
 
 
@@ -68,7 +68,7 @@ def explore_sub():
      substitution = "<email>"
      substituted = re.sub(regxp, substitution, text)
      print(f'\nText 1 - replacing found pattern by a text:\n\t "{text}"')
-     print(f'\t> Regexp value: "{regxp}')
+     print(f'\t> Regexp value: "{regxp}"')
      print(f'\t> Substitution: "{substitution}"')
      print(f'\t> Substituted: "{substituted}"')
 
@@ -78,7 +78,7 @@ def explore_sub():
      substitution = r"\2/\3/\1"
      substituted = re.sub(regxp, substitution, text)
      print(f'\nText 2 - replacing and group manipulated:\n\t "{text}"')
-     print(f'\t> Regexp value: "{regxp}')
+     print(f'\t> Regexp value: "{regxp}"')
      print(f'\t> Substitution: "{substitution}"')
      print(f'\t> Substituted: "{substituted}"\n')
 
@@ -97,14 +97,13 @@ def mask_project():
      text = ''
      while not re.match(regxp, text):
           text = input(instruction)
-          print('worked')
 
 
 
      substitution = r"***-**-\1"
      substituted = re.sub(regxp, substitution, text)
      print(f'\nText 1 - mini project replacing all but last number group:\n\t "{text}"')
-     print(f'\t> Regexp value: "{regxp}')
+     print(f'\t> Regexp value: "{regxp}"')
      print(f'\t> Substitution: "{substitution}"')
      print(f'\t> Substituted: "{substituted}"')
 
@@ -114,10 +113,42 @@ def explore_alternation():
      """Alternation or OR in Regexp"""
      log('Regular Expression - explore_alternation')
 
+    # multiple choices ( with cases ignore )
      text = "I love cats and DOGS."
      regxp = r"(cat.|dog.)"
      matches = re.findall(regxp, text, re.IGNORECASE)
-     print(f'\nText 1 - Text with 2 element identified with alternation:\n\t "{text}"')
-     print(f'\t> Regexp value: "{regxp}')
+     print(f'\nText 1 - Alternation multiple choices:\n\t "{text}"')
+     print(f'\t> Regexp value: "{regxp}"')
      print(f'\t> Matches: "{matches}"\n')
 
+    # case sensitive
+     text = "Python and PYTHON but Python."
+     regxp = r"python"
+     matches = re.findall(regxp, text, re.IGNORECASE)
+     print(f'\nText 2 - Alternation case sensitive:\n\t "{text}"')
+     print(f'\t> Regexp value: "{regxp}"')
+     print(f'\t> Found: "{matches}"\n')
+
+def explore_compilation_flags():
+     """Compilation flags ( start "^", end "$" )"""
+     log('Regular Expression - explore_compilation_flags')
+
+    # case sensitive + multiline
+     text = '''
+Python are animals.
+But this also refers to Python the programming language.
+Python name for the programming language comes 
+from Monty Python fans developers.
+    '''
+     regxp = r"^python"
+     matches = re.findall(regxp, text)
+     print(f'\nText 1 - Compilation flags with no alternation:\n\t "{text}"')
+     print(f'\t> Regexp value: "{regxp}"')
+     print(f'\t> Regexp flag: "re.IGNORECASE"')
+     print(f'\t> Found: "{matches}"\n')
+
+     matches = re.findall( regxp, text, re.IGNORECASE | re.MULTILINE )
+     print(f'\nText 2 - Compilation flags with alternation:\n\t "{text}"')
+     print(f'\t> Regexp value: "{regxp}"')
+     print(f'\t> Regexp flag: "re.IGNORECASE" | "re.MULTILINE"')
+     print(f'\t> Found: "{matches}"\n')

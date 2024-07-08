@@ -17,6 +17,7 @@ import _01_working_with_files.write_text as writer
 import _02_path_and_folders as paths
 import _02_path_and_folders.project__files_and_folder_cleaner as project2
 import _03_regular_expressions as regexp
+import _03_regular_expressions.project__contact_info_extractor as project3
 from custom_utils import log_header
 
 CURRENT_FOLDER = os.path.dirname(os.path.abspath(__file__))
@@ -143,6 +144,7 @@ def run_regular_expressions():
     regexp.explore_findall()
     regexp.explore_sub()
     regexp.explore_alternation()
+    regexp.explore_compilation_flags()
 
 # ---------------------------------------------------------------------------- #
 #                                   PROJECTS                                   #
@@ -173,8 +175,16 @@ def run_project_folder_cleaner():
     """Cleans / Organizes files and folder based on a given file"""
     project2.run()
 
-def run_projects_regexp():
+
+def run_project_regexp1():
+    """Mini project example with regexp -- Mask SSN first sequence"""
     regexp.mask_project()
+
+
+def run_project_regexp2():
+    """Extract contact info"""
+    project3.run()
+
 
 # ---------------------------------------------------------------------------- #
 #                                      CLI                                     #
@@ -184,14 +194,14 @@ try:
     programs = {
         "intro": run_intro,
         "files": run_working_with_files,
-        "paths": run_paths_and_folders,
         "regexp": run_regular_expressions,
     }
 
     projects = {
         "files": run_project_product_sales,
         "paths": run_project_folder_cleaner,
-        "regexp": run_projects_regexp
+        "regexp": run_project_regexp1,
+        "regexp2": run_project_regexp2,
     }
 
     print(sys.argv)

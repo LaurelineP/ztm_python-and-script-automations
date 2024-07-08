@@ -105,7 +105,8 @@ the mathematics parentheses priority principle.
 ### Expression mixing values string and operators +
 
 #### Concatenation
-Adding a value to a string is called a concatenation
+Adding the same type to another element being the same type - agrementing it:
+this is concatenation. Can apply to string, tuple and array
 ```py
 "Hello " + "Lowla"
 # Returns "Hello Lowla"
@@ -956,4 +957,9 @@ Raw string to express the regexp
 - `IGNORECASE` flag: makes the matching case insensitive
 - `MULTILINE` flag: makes `^` and `$`  matching the entire lines rather than the entire string
 - `DOTALL`: makes the dot character match all character including new lines
-- ``
+
+### Compile method ( from module re )
+This method enhance the performance, especially if a same regular expression
+is used several times ( in a loop for instance ) - but not all the time neither
+
+```.compile(<regexp-string>, [ <flag> ])```

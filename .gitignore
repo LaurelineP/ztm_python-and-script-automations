@@ -1,3 +1,6 @@
 .idea/
 __pycache__/
 _environment
+
+# Specific to sections
+_03_regular_expressions/project__contact_info_extractor/contact_info
