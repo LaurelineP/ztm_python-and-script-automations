@@ -1,6 +1,7 @@
 # Python
 ## Resources ( zip )
 https://cdn.fs.teachablecdn.com/cBpbX3XSyqrkGLkBD1q0
+
 ## 📌 Terminal / Shell / Python Shell
 Terminal - Allows you to run commands and also your programs.
 There are other ways to execute code such as program in files.
@@ -690,12 +691,70 @@ Step 2: Installing PyCharm
 
 3. Wait for the Copy to Finish: This might take a few minutes depending on your Mac's performance.
 
-
-
 Step 3: Running PyCharm
 1. Open PyCharm: Go to your “Applications” folder and find PyCharm. Double-click to open it.
 
 2. Initial Setup: The first time you open PyCharm, you’ll go through an initial setup process. This includes accepting the license agreement and configuring the IDE according to your preferences (like choosing a theme).
+
+
+## 🔹 Venv / Virtual Environment
+Virtual Environment enables to install the required environment to run a project.
+This allows to install contain the installed external packages for the project use
+and to use the right version of python.
+Note: `venv` is commonly used as the name of the virtual environment but could  
+be different
+
+
+### 1. Creating a virtual environment (CLI)
+Will create a new folder that will contain an "image" of the python version your  
+machine is referring to. This will be in this folder that all the package will be
+installed once the environment enabled
+`python -m venv` : create a virtual environment - by default this would be called `venv`
+`python -m venv _venv_`: this example would create a virtual environment called `_venv_`
+
+### 2. Activating the virtual environment (CLI)
+Allows to request the context of the project folder virtual environment.
+*"Use this python version and context*
+- typing `activate` in the virtual environment parent folder
+- other way: in the folder containing the virtual environment folder,  
+  - mac:`source <venv>/bin/activate`
+  - windows: `<venv>\Scripts\activate.bat`
+
+
+  #### Linux ( POSIX )
+  - with `bash/zsh`.      : `source <venv>/bin/activate`
+  - with  `fish`          : `source <venv>/bin/activate.fish`
+  - with `csh/tcsh`       : `source <venv>/bin/activate.csh`
+  - with `powershell`     : `<venv>/bin/Activate.ps1`
+
+  #### Windows
+  - with `cmd.exe`       : `C:\> <venv>\Scripts\activate.bat`
+  - with `powershell`    : `C:\> <venv>\Scripts\Activate.ps1`
+
+### 3. Install packages
+The Package Manager to install external packages: `pip` or `pip3`  
+which is was installed along Python
+`pip install <package-name>`
+
+### 4. Use the installed package 
+Now that your venv is contextualize and you've installed a package,  
+you can import it in a file under the project
+
+```sh
+Project/
+|
+|____ venv/
+    |___ bin/
+        |___ <activate files>
+        |___ <pip files>
+        |___ <python files>
+    |___ include/python/
+    |___ lib/
+        |___<packages and dependence packages>/
+        |___ pip
+        |___ pyvenv.cfg ( config for this project - auto generated on venv creation )
+
+```
 
 ## 📌 Working With Files
 ### 🔹 Plaintext files:
@@ -963,3 +1022,113 @@ This method enhance the performance, especially if a same regular expression
 is used several times ( in a loop for instance ) - but not all the time neither
 
 ```.compile(<regexp-string>, [ <flag> ])```
+
+
+
+
+
+
+## Spreadsheets
+### openpyxl package
+Python Package allowing to use python to create spreadsheets
+new excel sheet, open existing sheet, read and write on a sheet
+- vocabulary
+  - workbook  = represents the excel file in openpyxl
+  - worksheet = represents the sheet within the excel file in openpyxl
+  Access visualization: workbook > worksheet > cell
+
+#### installation in project
+- create and/or activate a virtual environment
+- add the package "openpyxl" `pip install openpyxl`
+
+
+
+#### openpyxl manipalions
+- create a file (xlxs): 
+```py
+new_workbook = openpyxl.Workbook()
+new_workbook.save(<filename>)
+```
+- get file content (xlxs): 
+```py
+new_workbook = openpyxl.load_workbook(<filename>)
+```
+- get file content cell 
+```py
+# selects the current work sheet
+worksheet = new_workbook.active
+
+# selects the current work sheet cell A1
+new_workbook['A1']
+```
+
+- get file content cell 
+```py
+# cell A1
+new_workbook['A1'] = 'Hello'
+```
+
+### gsread: google spread sheet
+Automate all kind of google sheets operations from Pyhon
+- create and/or activate a virtual environment
+- add the package "openpyxl" `pip install gsread`
+
+#### Google Spread Sheet
+A cloud system providing excel like sheets
+- signin to goodle account in google cloud console  
+ to get an api key to use google spreadsheet ( or create an account)
+ Try not to do the following without acting upon "try for free"
+- create a project > then select it
+- scrolling down > check were "API and services" is > select it  
+  - if you don't find it: find the search bar and look for   
+  "API and services" and select
+- Click on "enable API and Services" to select the services we want
+- In API and Services page, search for
+  - google drive API ( select the first one )  
+  - then click the button "enable"
+  - navigate to credentials - to create one
+    - make sure google drive API is selected
+    - make sure to select the access on "Application data"
+    - finally, scroll down and select the fact we will not use the   
+    Compute Engine, Kubernetes Engine, APP Engine or Cloud functions.
+  - Click on "next" > leading to a Service account details  
+  A service account is a special google account to represent a non human user needing to authenticate to the service to access the files
+  --> here this would be used by the python code
+  - Filling the information for a service account
+    - Service account name: type a name
+    - Service account id: automatically generated
+    - Hit "create and continue" button to set the role for the account.
+    - Select on the dropdown the category Project > Roles "Editor"
+    - Hit continue > then "done"
+    --> this will redirect to the home dashboard of enabled API and services  
+  - Select the new service created "credentials" tab
+  - Then, scrolling down, we could find the link of our service account created > click on it to access to the key
+  - Select the "keys" tab > add a key > create new key
+  - select the json format which will generate a JSON file containing your credentials.
+  - download the file ( rename it if you want ) and make sure to not
+  share the file
+
+  Now we need to enable the google sheet api ( this was for the google drive )
+  - go to "API and Services"
+  - click on enable API
+  - search for "google sheets" service to select
+  - click enabled and that's done
+
+  Now back to the project, we need to copy the keys
+  - open the downloaded json > copy the value of "client_email"
+  - create a spread sheet
+  - the goal is to share the spread sheet with the copied "client_email"
+  - share the spreadsheet > paste it the "client_email"  
+  and ensure the role "Editor" is selected
+  - uncheck the "notify" checkbox
+  - confirm the share action
+
+
+  Now we can go back to code
+  - import the `gspread`
+  - establish the connection using   
+  `google_client = gspread.service_account(<json-file>)`
+  - open the file with `google_client.open(<name-of-spreadsheet>)
+
+### SET PYTHON PATH TEMPORARY
+  export PYTHONPATH="/path/to/your/venv/lib/python3.x/site-packages"

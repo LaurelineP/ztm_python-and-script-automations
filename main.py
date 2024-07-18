@@ -4,9 +4,15 @@
     to launch from command line
 """
 
+
 import os
 import pathlib
 import sys
+import importlib.util as importlib
+
+CURRENT_FOLDER = os.path.dirname(os.path.abspath(__file__))
+FILE_INPUTS_FOLDER = 'file_inputs'
+FILE_OUTPUTS_FOLDER = 'file_outputs'
 
 import _00_introduction_and_installations as intro
 import _01_working_with_files.csv_data_manipulation as csv_manip
@@ -18,11 +24,15 @@ import _02_path_and_folders as paths
 import _02_path_and_folders.project__files_and_folder_cleaner as project2
 import _03_regular_expressions as regexp
 import _03_regular_expressions.project__contact_info_extractor as project3
-from custom_utils import log_header
 
-CURRENT_FOLDER = os.path.dirname(os.path.abspath(__file__))
-FILE_INPUTS_FOLDER = 'file_inputs'
-FILE_OUTPUTS_FOLDER = 'file_outputs'
+
+# import _04_excel_automation as excel
+
+
+from custom_utils import log_header
+import subprocess
+
+
 
 # 00 - Working with files
 
@@ -146,6 +156,30 @@ def run_regular_expressions():
     regexp.explore_alternation()
     regexp.explore_compilation_flags()
 
+
+def run_excel():
+    """Runs the Spread Sheets automation sections """
+    # -------------------------------- SOLUTION 1 --------------------------------
+    def run_venv():
+        """Runs the venv python and executes the module"""
+        venv_python = os.path.join(CURRENT_FOLDER, '_04_excel_automation', '_venv_/bin/python3')
+        module_path = os.path.join(CURRENT_FOLDER, '_04_excel_automation/__init__.py')
+        subprocess.run([venv_python, module_path])
+        
+    run_venv()
+    
+	# -------------------------------- SOLUTION 2: ------------------------------- #
+    # https://www.geeksforgeeks.org/python-import-module-outside-directory/
+
+    
+
+
+	
+    # print('excel run', excel)
+    # print(x)
+    # excel.run()
+
+
 # ---------------------------------------------------------------------------- #
 #                                   PROJECTS                                   #
 # ---------------------------------------------------------------------------- #
@@ -195,6 +229,7 @@ try:
         "intro": run_intro,
         "files": run_working_with_files,
         "regexp": run_regular_expressions,
+        "excel": run_excel,
     }
 
     projects = {

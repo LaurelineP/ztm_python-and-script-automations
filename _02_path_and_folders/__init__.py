@@ -4,6 +4,12 @@ from shutil import copy, move, rmtree
 from custom_utils import log_header
 
 
+print('\n\n\n')
+log_header('02. Path and Folders', False)
+print(' --- cleaning folder and files')
+print('\n\n\n')
+
+
 def display_paths_details():
     """Displays details from this current"""
     log_header('display_paths_details')

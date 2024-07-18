@@ -6,7 +6,10 @@ from datetime import datetime
 
 from custom_utils import log, log_header
 
-log_header('Regular Expression')
+print('\n\n\n')
+log_header('03. Regular Expression', False)
+print(' --- cleaning folder and files')
+print('\n\n\n')
 
 
 def explore_search():
