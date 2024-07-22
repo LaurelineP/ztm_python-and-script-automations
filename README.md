@@ -1029,54 +1029,86 @@ is used several times ( in a loop for instance ) - but not all the time neither
 
 
 ## Spreadsheets
-### openpyxl package
+### Openpyxl package
 Python Package allowing to use python to create spreadsheets
 new excel sheet, open existing sheet, read and write on a sheet
+through the google services
 - vocabulary
-  - workbook  = represents the excel file in openpyxl
+  - workbook  = represents the excel file in openpyxl, a collection of worksheet
   - worksheet = represents the sheet within the excel file in openpyxl
   Access visualization: workbook > worksheet > cell
+- Manipulating a file: opening it and modifying does not need manual
+file closing as it is automatic
 
-#### installation in project
+#### Installation in project
 - create and/or activate a virtual environment
 - add the package "openpyxl" `pip install openpyxl`
 
 
 
-#### openpyxl manipalions
-- create a file (xlxs): 
+#### OpenPyXl manipulations
+- create a file (xlsx): 
 ```py
 new_workbook = openpyxl.Workbook()
 new_workbook.save(<filename>)
 ```
-- get file content (xlxs): 
+- get file content (xlsx): 
 ```py
 new_workbook = openpyxl.load_workbook(<filename>)
 ```
-- get file content cell 
+- get access to worksheet ( current sheet )
 ```py
 # selects the current work sheet
 worksheet = new_workbook.active
+```
 
-# selects the current work sheet cell A1
-new_workbook['A1']
+- get access to a specific worksheet
+```py
+# access by brackets
+# worksheet = new_workbook[<STR-WORKSHEET-NAME>]
+worksheet = new_workbook['Sheet3'] # access sheet 3
+```
+
+- get worksheet name
+```py
+worksheet_title = worksheet.title
+
+# modify sheet title
+worksheet.title = <NEW-TITLE>
+worksheet.save()
 ```
 
 - get file content cell 
 ```py
-# cell A1
-new_workbook['A1'] = 'Hello'
+# selects the current work sheet cell A1
+worksheet['A1']
 ```
 
-### gsread: google spread sheet
-Automate all kind of google sheets operations from Pyhon
-- create and/or activate a virtual environment
-- add the package "openpyxl" `pip install gsread`
+- get file content cell 
+```py
+# assign a new value to cell A1
+worksheet['A1'] = 'Hello'
+```
 
-#### Google Spread Sheet
+- delete a 
+```py
+# workbook - being a dictionary collection of worksheet
+# worksheet [ also spreadsheet ] - being a the container of sheets
+# sheets - being an excel content ( tab ) that has cells
+
+# deleting the first worksheet
+del workbook[0]
+```
+
+### GSpread: Google Spread Sheet
+Package Automating all kind of google sheets operations from Python
+- create and/or activate a virtual environment
+- add the package "openpyxl" `pip install GSpread`
+
+#### Google Spread Sheet x account x connection
 A cloud system providing excel like sheets
-- signin to goodle account in google cloud console  
- to get an api key to use google spreadsheet ( or create an account)
+- sign-in to google account in google cloud console  
+ to get an api key to use google spreadsheet ( or create an account )
  Try not to do the following without acting upon "try for free"
 - create a project > then select it
 - scrolling down > check were "API and services" is > select it  
@@ -1124,11 +1156,30 @@ A cloud system providing excel like sheets
   - confirm the share action
 
 
-  Now we can go back to code
-  - import the `gspread`
-  - establish the connection using   
-  `google_client = gspread.service_account(<json-file>)`
-  - open the file with `google_client.open(<name-of-spreadsheet>)
+[!INFO]
+> - we created an account, enabling the API keys to use for the services
+> - we created an excel sheet that we shared to the email account created
+> - we need to use the share link w/ the service account email ( hence the service account creation ) to connect to the cloud service serving this excel sheet
 
-### SET PYTHON PATH TEMPORARY
-  export PYTHONPATH="/path/to/your/venv/lib/python3.x/site-packages"
+[!INFO]
+> - Google Console created > to access Google Cloud Platform > to enable
+> services [ google drive, google spreadsheet ]
+> - created a spreadsheet > copy the google account email > 
+   click on share and provide (paste) the email ( which enables the access through the credentials ( json file downloaded ))
+> - run your script that connects to the google client > then open the
+  existing spreadsheet
+    - running the script before the sharing action, returned an error file not found from google
+    - running the script after the sharing action, returned a successful 
+    spreadsheet result
+
+
+#### GSpread: instantiating the google account
+  Now we can go back to code
+  - import the `gspread` package
+  - establish the connection using   
+  `google_client = gspread.service_account(<json-file-path>)`
+  - worksheet obtained by opening the file with `google_client.open(<name-of-spreadsheet-created>)`
+  - accessing the worksheet > sheet: `worksheet.sheet1`
+  - editing / adding content to one cell: `sheet.update_acell(<CELL>, <CONTENT>)`
+  - editing / adding content to multiple cell: `sheet.update()`
+

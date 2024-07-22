@@ -4,7 +4,7 @@ _environment
 .env
 
 # Ignores all _venv_ folders
-*/_venv_/
+# */_venv_/
 
 
 # Ignores Specific content in folder sections [ code generated file or folders ]
