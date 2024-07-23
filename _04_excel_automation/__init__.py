@@ -14,7 +14,7 @@ from excel_openpyxl import (LOCAL_EXCEL_PATH, automate_excel_sheet_create,
                             create_spreadsheet_sheet,
                             delete_spreadsheet_sheets,
                             rename_spreadsheet_sheet)
-from inner_module_utils import jls_extract_def
+from inner_module_utils import load_custom_utils
 from project_ex__employees_spreadsheet import (
     add_sheet_content, create_one_employees_spreadsheet)
 
@@ -23,6 +23,8 @@ from project_ex__employees_spreadsheet import (
 
 log_header, log = load_custom_utils()
 
+print(os.getcwd())
+# x = load_module_from_path()
 
 # loading env
 ENV = dotenv.load_dotenv('../.env')
