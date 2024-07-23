@@ -2,6 +2,7 @@
 __pycache__/
 _environment
 .env
+.vscode
 
 
 # Ignores all _venv_ folders
