@@ -1103,7 +1103,7 @@ del workbook[0]
 ### GSpread: Google Spread Sheet
 Package Automating all kind of google sheets operations from Python
 - create and/or activate a virtual environment
-- add the package "openpyxl" `pip install GSpread`
+- add the package "openpyxl" `pip install gspread`
 
 #### Google Spread Sheet x account x connection
 A cloud system providing excel like sheets

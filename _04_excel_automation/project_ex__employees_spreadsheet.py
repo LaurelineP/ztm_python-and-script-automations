@@ -103,4 +103,5 @@ def generate_employees(filepath, employees, employees_cells_collection):
         print('----', employee,  employee_cells_list)
         _add_sheet_content(filepath, employee, employee_cells_list)
 
+    print('Spreadsheets sheets:', spreadsheet.sheetnames)
     return spreadsheet
