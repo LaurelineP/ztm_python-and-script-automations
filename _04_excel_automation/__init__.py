@@ -14,17 +14,14 @@ from excel_openpyxl import (LOCAL_EXCEL_PATH, automate_excel_sheet_create,
                             create_spreadsheet_sheet,
                             delete_spreadsheet_sheets,
                             rename_spreadsheet_sheet)
-from inner_module_utils import load_custom_utils
-from project_ex__employees_spreadsheet import (
-    add_sheet_content, create_one_employees_spreadsheet)
+from inner_module_utils import (load_custom_utils, load_module,
+                                load_module_from_path)
+from project_ex__employees_spreadsheet import generate_employees
 
 # ---------------------------- IMPORT OUTER UTIL ---------------------------- #
 
 
-log_header, log = load_custom_utils()
-
-print(os.getcwd())
-# x = load_module_from_path()
+log_header, log, log_object = load_custom_utils()
 
 # loading env
 ENV = dotenv.load_dotenv('../.env')
@@ -82,19 +79,40 @@ def run():
 
     def explore_project_ex__employees_spreadsheet():
         '''explore_project_ex__employees_spreadsheet
-            Executes the project example "Employees spreadsheet"
+                Executes the project example "Employees spreadsheet"
         '''
         log_header('Project Example: Employees Spreadsheet')
 
+        # ----------------------------------- PATHS ---------------------------------- #
         file_path = Path(__file__).parent / 'generated/employees.xlsx'
+        if not file_path.parent.exists():
+            os.makedirs(file_path.parent)
 
-        # 1. create the spreadsheet files
-        create_one_employees_spreadsheet(file_path)
+        # -------------------------------- MOCKED DATA ------------------------------- #
+        employees_names = ['Jane', 'John']
 
-        # 2. Adds a sheet per employee
-        contents = [['a1', 'hello'], ['a2', 'world']]
-        workbook = add_sheet_content(file_path, 'Kitty', contents)
-        print(f'\t> [ EXISTING SHEETS ]\n\t |____{list(workbook.worksheets)}')
+        # Describes employee overview on first 'Sheet' at the first column
+        root_sheet_values = [
+            [f'a{idx+1}', name] for idx, name in enumerate(employees_names)
+        ]
+
+        # Dynamically attribute cells to an employee - creating an employee cells collection
+        employees_sheet_values = [
+            [['a1', f'Hello {name}!']] for name in employees_names
+        ]
+
+        # ---------------------------------- Project --------------------------------- #
+        generate_employees(
+            file_path,
+            # Sheet to create
+            ['Sheet', *employees_names],
+
+            # Sheets' content referring to employee name index
+            [
+                root_sheet_values,
+                *employees_sheet_values
+            ]
+        )
 
     explore_project_ex__employees_spreadsheet()
 
@@ -123,7 +141,7 @@ def run():
 
         # Deleting spreadsheets
         # clear_created_spreadsheets()
-    explore_gspread()
+    # explore_gspread()
 
 
 run()

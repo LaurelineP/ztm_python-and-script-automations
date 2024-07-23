@@ -1,19 +1,49 @@
-
-import re
-from pathlib import Path
-
-import openpyxl
-from inner_module_utils import jls_extract_def
-
-log_header, log = jls_extract_def()
-
 ''' Project example Employees Spreadsheet
-                                Generate a spreadsheet representing employees
-                                with each sheet representing one employees details
+				Generate a spreadsheet representing employees
+				with each sheet representing one employees details
 '''
+# ------------------------------ PRIVATE IMPORTS ----------------------------- #
+import re as _re
+from pathlib import Path as _Path
+
+import openpyxl as _openpyxl
+from inner_module_utils import load_custom_utils as _load_custom_utils
+
+_log_header, _log, _log_object = _load_custom_utils()
 
 
-def add_sheet_content(filepath, employee_name, contents):
+# __all__ = [add_sheet_content', 'create_one_employees_spreadsheet']
+
+
+# ----------------------------------- LOGIC ---------------------------------- #
+
+# --------------------- CREATE ONE EMPLOYEES SPREADSHEET --------------------- #
+def _create_one_employees_spreadsheet(excel_path: _Path):
+    '''create_employees_spreadsheet Create a new employees spreadsheet
+                                                                    [ from scratch ] - not reusing existing logic personally added ( practice )
+    Args:
+                                                                    excel_path(_type_): excel file path
+                                                                    content(list, optional): excel sheet content list. Defaults to [].
+    '''
+    _log('EMPLOYEES SPREADSHEET - CREATE')
+    # Creates one file employees spreadsheet
+    if not _Path(excel_path).exists():
+        new_spreadsheet = _openpyxl.Workbook()
+        new_spreadsheet.save(excel_path)
+        print(
+            f'\t > [ CREATE EMPLOYEE SPREADSHEET ] \n\t "{
+                excel_path.name}" file will be created.'
+        )
+        return new_spreadsheet
+    else:
+        print(f'\t > [ CREATE EMPLOYEE SPREADSHEET ] \n\t ▶️ "{
+            excel_path.name}" file already exists.'
+        )
+        return _openpyxl.load_workbook(excel_path)
+
+
+# -------------------------------- ADD SHEETS -------------------------------- #
+def _add_sheet_content(filepath, employee_name, contents):
     '''add_sheet_content Add content to a sheet
 
     Args:
@@ -21,12 +51,12 @@ def add_sheet_content(filepath, employee_name, contents):
                     employee_name (str): employee name used as a sheet name
                     contents (list): list of cells position / value
     '''
-    log(f'Sheet Creation "{employee_name}"')
+    _log(f'Sheet Creation "{employee_name}"')
 
     # Sheet loading import file contents
-    workbook = openpyxl.load_workbook(filepath)
+    workbook = _openpyxl.load_workbook(filepath)
 
-    # Sheet creation
+    # Sheet creation if needed
     worksheets_titles = [ws.title for ws in workbook.worksheets]
     if employee_name not in worksheets_titles:
         workbook.create_sheet(employee_name)
@@ -39,7 +69,7 @@ def add_sheet_content(filepath, employee_name, contents):
     has_valid_contents = all(
         # - should contains a list of 2
         # - and its first item should be of a cell pattern
-        len(c) == 2 and re.search(cell_pattern, c[0])
+        len(c) == 2 and _re.search(cell_pattern, c[0])
         for c in contents
     )
 
@@ -51,7 +81,7 @@ def add_sheet_content(filepath, employee_name, contents):
 
             workbook.save(filepath)
             print(f'\t> Successfully added cell: \n\t |_______ {
-                  cell}: {value}\n')
+                cell}: {value}\n')
 
     else:
         print(
@@ -61,25 +91,16 @@ def add_sheet_content(filepath, employee_name, contents):
     return workbook
 
 
-def create_one_employees_spreadsheet(excel_path: Path, content=[[]]):
-    '''create_employees_spreadsheet Create a new employees spreadsheet
-            [ from scratch ] - not reusing existing logic personally added ( practice )
+def generate_employees(filepath, employees, employees_cells_collection):
+    '''Generate the whole employees spreadsheets and content'''
+    _log('Generate Employees')
+    # Creates file
+    spreadsheet = _create_one_employees_spreadsheet(filepath)
 
+    # Create a sheet with content per employees
+    for employee, employee_cells_list in zip(employees, employees_cells_collection):
+        # Create a sheet per employee
+        print('----', employee,  employee_cells_list)
+        _add_sheet_content(filepath, employee, employee_cells_list)
 
-    Args:
-            excel_path(_type_): excel file path
-            content(list, optional): excel sheet content list. Defaults to [].
-    '''
-    log('EMPLOYEES SPREADSHEET - CREATE')
-    # Creates one file employees spreadsheet
-    if not Path(excel_path).exists():
-        new_spreadsheet = openpyxl.Workbook()
-        new_spreadsheet.save(excel_path)
-        print(
-            f'\t > [ CREATE EMPLOYEE SPREADSHEET ] \n\t "{
-                excel_path.name}" file will be created.'
-        )
-    else:
-        print(f'\t > [ CREATE EMPLOYEE SPREADSHEET ] \n\t ▶️ "{
-            excel_path.name}" file already exists.'
-        )
+    return spreadsheet

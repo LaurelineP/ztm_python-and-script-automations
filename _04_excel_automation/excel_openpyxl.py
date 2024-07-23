@@ -55,7 +55,6 @@ def automate_excel_spreadsheet_import(filename=LOCAL_EXCEL_PATH):
     return workbook
 
 
-# TODO: review bellow - craft implementation unfinished
 def create_spreadsheet_sheet(workbook_path, new_sheet_name):
     '''create_spreadsheet_sheet Creates a spreadsheet's sheet
 

@@ -3,6 +3,7 @@ __pycache__/
 _environment
 .env
 
+
 # Ignores all _venv_ folders
 # */_venv_/
 
@@ -10,3 +11,4 @@ _environment
 # Ignores Specific content in folder sections [ code generated file or folders ]
 _03_regular_expressions/project__contact_info_extractor/contact_info
 _04_excel_automation/local_excel_sheet.xlsx
+**/generated
