@@ -14,21 +14,18 @@ from excel_openpyxl import (LOCAL_EXCEL_PATH, automate_excel_sheet_create,
                             create_spreadsheet_sheet,
                             delete_spreadsheet_sheets,
                             rename_spreadsheet_sheet)
+from inner_module_utils import jls_extract_def
+from project_ex__employees_spreadsheet import (
+    add_sheet_content, create_one_employees_spreadsheet)
 
 # ---------------------------- IMPORT OUTER UTIL ---------------------------- #
-custom_utils_path = Path('..', os.getcwd()).resolve() / 'custom_utils.py'
-import_spec = importlib.spec_from_file_location(
-    'custom_utils', custom_utils_path)
-custom_utils = importlib.module_from_spec(import_spec)
-import_spec.loader.exec_module(custom_utils)
-log_header = custom_utils.log_header
-log = custom_utils.log
+
+
+log_header, log = load_custom_utils()
 
 
 # loading env
 ENV = dotenv.load_dotenv('../.env')
-print('ENV', ENV)
-# print('env_config',env_config)
 
 print('\n\n\n')
 log_header('04. Excel Automation', False)
@@ -81,6 +78,24 @@ def run():
 
     explore_openpyxl()
 
+    def explore_project_ex__employees_spreadsheet():
+        '''explore_project_ex__employees_spreadsheet
+            Executes the project example "Employees spreadsheet"
+        '''
+        log_header('Project Example: Employees Spreadsheet')
+
+        file_path = Path(__file__).parent / 'generated/employees.xlsx'
+
+        # 1. create the spreadsheet files
+        create_one_employees_spreadsheet(file_path)
+
+        # 2. Adds a sheet per employee
+        contents = [['a1', 'hello'], ['a2', 'world']]
+        workbook = add_sheet_content(file_path, 'Kitty', contents)
+        print(f'\t> [ EXISTING SHEETS ]\n\t |____{list(workbook.worksheets)}')
+
+    explore_project_ex__employees_spreadsheet()
+
     def explore_gspread():
         """Execute functions excel_gspread"""
 
@@ -106,7 +121,6 @@ def run():
 
         # Deleting spreadsheets
         # clear_created_spreadsheets()
-
     explore_gspread()
 
 

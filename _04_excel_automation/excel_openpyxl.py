@@ -97,7 +97,7 @@ def rename_spreadsheet_sheet(filepath, sheet_name, new_sheet_name):
         new_sheet_name (str): new name for the spreadsheet sheet
 
     Returns:
-                    Workbook: the modified workbook
+        Workbook: the modified workbook
     '''
     print('\n[[ OpenPyXl ] Automate excel spreadsheet - Rename Spreadsheet sheet ]')
     workbook = openpyxl.load_workbook(filepath)
@@ -112,7 +112,6 @@ def rename_spreadsheet_sheet(filepath, sheet_name, new_sheet_name):
                 lambda v: v.title,
                 workbook.worksheets
             ))
-            print('🔥', _workbook_content)
             workbook.save(filepath)
             print(
                 '\t> [ Sheet Rename ] Sheet {sheet_name} renamed as {new_sheet_name}'
