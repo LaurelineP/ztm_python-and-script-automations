@@ -1,6 +1,6 @@
 ''' Project example Employees Spreadsheet
-				Generate a spreadsheet representing employees
-				with each sheet representing one employees details
+		Generate a spreadsheet representing employees
+		with each sheet representing one employees details
 '''
 # ------------------------------ PRIVATE IMPORTS ----------------------------- #
 import re as _re
@@ -12,18 +12,15 @@ from inner_module_utils import load_custom_utils as _load_custom_utils
 _log_header, _log, _log_object = _load_custom_utils()
 
 
-# __all__ = [add_sheet_content', 'create_one_employees_spreadsheet']
-
-
 # ----------------------------------- LOGIC ---------------------------------- #
 
 # --------------------- CREATE ONE EMPLOYEES SPREADSHEET --------------------- #
 def _create_one_employees_spreadsheet(excel_path: _Path):
     '''create_employees_spreadsheet Create a new employees spreadsheet
-                                                                    [ from scratch ] - not reusing existing logic personally added ( practice )
+            [ from scratch ] - not reusing existing logic personally added ( practice )
     Args:
-                                                                    excel_path(_type_): excel file path
-                                                                    content(list, optional): excel sheet content list. Defaults to [].
+            excel_path(_type_): excel file path
+            content(list, optional): excel sheet content list. Defaults to [].
     '''
     _log('EMPLOYEES SPREADSHEET - CREATE')
     # Creates one file employees spreadsheet
@@ -47,9 +44,9 @@ def _add_sheet_content(filepath, employee_name, contents):
     '''add_sheet_content Add content to a sheet
 
     Args:
-                    filepath (str): filepath name to add sheet to
-                    employee_name (str): employee name used as a sheet name
-                    contents (list): list of cells position / value
+            filepath (str): filepath name to add sheet to
+            employee_name (str): employee name used as a sheet name
+            contents (list): list of cells position / value
     '''
     _log(f'Sheet Creation "{employee_name}"')
 
@@ -92,7 +89,20 @@ def _add_sheet_content(filepath, employee_name, contents):
 
 
 def generate_employees(filepath, employees, employees_cells_collection):
-    '''Generate the whole employees spreadsheets and content'''
+    '''generate_employees   Generate the whole employees spreadsheets and content
+
+    Args:
+            filepath (Path): spreadsheet path
+            employees (List[str]): employees list
+            employees_cells_collection (List[List[List[str]]]): collection of all
+            the employees cells
+            - a list to contain them all
+            - inner list (level 1) - corresponding to an employee cells collection
+            - inner - inner tuple (level 2) - corresponding to a cell (<cell-address>, <value>)
+
+    Returns:
+            _type_: SpreadSheet
+    '''
     _log('Generate Employees')
     # Creates file
     spreadsheet = _create_one_employees_spreadsheet(filepath)
@@ -100,8 +110,8 @@ def generate_employees(filepath, employees, employees_cells_collection):
     # Create a sheet with content per employees
     for employee, employee_cells_list in zip(employees, employees_cells_collection):
         # Create a sheet per employee
-        print('----', employee,  employee_cells_list)
         _add_sheet_content(filepath, employee, employee_cells_list)
 
     print('Spreadsheets sheets:', spreadsheet.sheetnames)
+
     return spreadsheet

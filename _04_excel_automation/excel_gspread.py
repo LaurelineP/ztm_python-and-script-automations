@@ -8,6 +8,9 @@ from pathlib import Path
 
 import dotenv
 import gspread
+from inner_module_utils import load_custom_utils as _load_custom_utils
+
+_log_header, _log, _log_object = _load_custom_utils()
 
 # ref: = /Users/<user>/Desktop/CODE/ztm/ztm-python-automation
 ENV_PATH = Path(__file__).parent.parent / '.env'
@@ -105,13 +108,24 @@ def create_and_share_google_sheet(filename="python created excel sheet", email=C
     print('\n[[ GSpread ] Automate excel sheet - create ]')
 
     try:
-        spreadsheet = GOOGLE_CLIENT.create(filename)
+        # print('GOOGLE_CLIENT details', GOOGLE_CLIENT.open(filename))
+        # spreadsheet = GOOGLE_CLIENT.create(filename)
+        spreadsheet_names = [
+            s['name'] for s in GOOGLE_CLIENT.list_spreadsheet_files()
+        ]
+
+        if filename in spreadsheet_names:
+            spreadsheet = GOOGLE_CLIENT.open(filename)
+        else:
+            spreadsheet = GOOGLE_CLIENT.create(filename)
+
+        print('===================', spreadsheet_names)
     except:
         print('❌ [ Creation ] File creation failed')
     finally:
         print('[ Creation ] Completed google sheet creation.')
 
-    # Enables a user to access it ( here it will be us / personal email )
+    # Once updated, Enables a user to access it ( here it will be us / personal email )
     try:
         spreadsheet.share(
             email,
@@ -152,6 +166,8 @@ def clear_created_spreadsheets(filename=None):
     print('Check spreadsheet after clearing', len(GOOGLE_CLIENT.openall()))
 
 
-def rename_sheet(spreadsheet, name):
-    # GOOGLE_CLIENT.
-    print('hello - renamesheet')
+def rename_sheet(filename, sheet_old_name: str, sheet_new_name: str):
+    _log('Rename Sheet')
+    spreadsheet = GOOGLE_CLIENT.open(filename)
+    # print('SHEETTTT??', spreadsheet.worksheet(sheet_old_name))
+    # spreadsheet[sheet_old_name].title = new_name

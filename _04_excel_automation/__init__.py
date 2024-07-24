@@ -8,7 +8,7 @@ import dotenv
 from excel_gspread import (clear_created_spreadsheets,
                            connect_to_google_account,
                            create_and_share_google_sheet,
-                           manipulate_google_sheet)
+                           manipulate_google_sheet, rename_sheet)
 from excel_openpyxl import (LOCAL_EXCEL_PATH, automate_excel_sheet_create,
                             automate_excel_spreadsheet_import,
                             create_spreadsheet_sheet,
@@ -89,16 +89,16 @@ def run():
             os.makedirs(file_path.parent)
 
         # -------------------------------- MOCKED DATA ------------------------------- #
-        employees_names = ['Jane', 'John']
+        employees_names = ['Jane Doe', 'John Smith']
 
         # Describes employee overview on first 'Sheet' at the first column
         root_sheet_values = [
-            [f'a{idx+1}', name] for idx, name in enumerate(employees_names)
+            (f'a{idx+1}', name) for idx, name in enumerate(employees_names)
         ]
 
         # Dynamically attribute cells to an employee - creating an employee cells collection
         employees_sheet_values = [
-            [['a1', f'Hello {name}!']] for name in employees_names
+            [('a1', f'Hello {name}!')] for name in employees_names
         ]
 
         # ---------------------------------- Project --------------------------------- #
@@ -121,26 +121,29 @@ def run():
 
         log('EXCEL AUTOMATION - GSPREAD')
 
-        connect_to_google_account()
+        # google client
+        gc = connect_to_google_account()
 
         # Updates by targeting a cell and providing the value
-        # manipulate_google_sheet(update_content=['A1', 'Hello'])
+        manipulate_google_sheet(update_content=['A1', 'Aloha'])
 
         # Updates by coordinations values
-        # manipulate_google_sheet(update_content=[3, 3, 'Hello Bis'])
+        manipulate_google_sheet(update_content=[3, 3, 'Hello Bis'])
 
-        # new_spreadsheet = create_and_share_google_sheet()
-        # spreadsheet_title = new_spreadsheet.title
-        # print(f'Created spread sheet title: {spreadsheet_title}')
+        new_spreadsheet = create_and_share_google_sheet('23/07/2024')
+        spreadsheet_title = new_spreadsheet.title
+        print(f'Created spread sheet title: {spreadsheet_title}')
 
         # Modifies a specifics spreadsheet
-        # manipulate_google_sheet(
-        #     filename=spreadsheet_title,
-        #     update_content=['A1', 'New Spreadsheet']
-        # )
+        manipulate_google_sheet(
+            filename=spreadsheet_title,
+            update_content=['A1', 'New Spreadsheet']
+        )
 
         # Deleting spreadsheets
         # clear_created_spreadsheets()
+
+        rename_sheet(spreadsheet_title, 'New Spreadsheet', 'sheetplop')
     # explore_gspread()
 
 
