@@ -12,9 +12,10 @@ from inner_module_utils import load_custom_utils as _load_custom_utils
 _log_header, _log, _log_object = _load_custom_utils()
 
 
-# ----------------------------------- LOGIC ---------------------------------- #
-
-# --------------------- CREATE ONE EMPLOYEES SPREADSHEET --------------------- #
+# ---------------------------------------------------------------------------- #
+#                                     LOGIC                                    #
+# ---------------------------------------------------------------------------- #
+# --------------------- CREATE ONE EMPLOYEE SPREADSHEET ---------------------- #
 def _create_one_employees_spreadsheet(excel_path: _Path):
     '''create_employees_spreadsheet Create a new employees spreadsheet
             [ from scratch ] - not reusing existing logic personally added ( practice )
@@ -39,7 +40,7 @@ def _create_one_employees_spreadsheet(excel_path: _Path):
         return _openpyxl.load_workbook(excel_path)
 
 
-# -------------------------------- ADD SHEETS -------------------------------- #
+# --------------------------- ADD SHEETS & CONTENT --------------------------- #
 def _add_sheet_content(filepath, employee_name, contents):
     '''add_sheet_content Add content to a sheet
 

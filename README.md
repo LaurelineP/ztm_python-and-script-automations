@@ -1178,8 +1178,25 @@ A cloud system providing excel like sheets
   - import the `gspread` package
   - establish the connection using   
   `google_client = gspread.service_account(<json-file-path>)`
-  - worksheet obtained by opening the file with `google_client.open(<name-of-spreadsheet-created>)`
-  - accessing the worksheet > sheet: `worksheet.sheet1`
-  - editing / adding content to one cell: `sheet.update_acell(<CELL>, <CONTENT>)`
-  - editing / adding content to multiple cell: `sheet.update()`
+
+##### Open existing spreadsheet
+  - spreadsheet obtained by opening the file with `google_client.open(<name-of-spreadsheet-created>)`
+
+##### Creating spreadsheet
+- `spreadsheet = GOOGLE_CLIENT.create(filename)`
+
+##### Updating spreadsheet 
+_Spreadsheet_
+  - updating the spreadsheet title: `spreadsheet.update_title(<new-name>)`
+
+##### Accessing spreadsheet sheets
+_Spreadsheet > sheet_
+  - accessing the worksheet > current sheet: `spreadsheet.sheet1`
+  - accessing the worksheet > a sheet: `spreadsheet.worksheet(<worksheet-title>)`
+
+##### Updating values (cells)
+_Spreadsheet > sheet > cells_
+  - editing / adding content to one cell - by cell address and value: `sheet.update_acell(<CELL>, <CONTENT>)`
+  - editing / adding content to one cell - by row / col / coordinations   
+  `sheet.update_cell(<row-index>, <col-index>, <value>)`
 

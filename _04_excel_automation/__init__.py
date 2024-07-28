@@ -5,9 +5,9 @@ import os
 from pathlib import Path
 
 import dotenv
-from excel_gspread import (clear_created_spreadsheets,
-                           connect_to_google_account,
-                           create_and_share_google_sheet,
+from excel_gspread import (connect_to_google_account,
+                           create_and_share_google_sheet, create_sheets,
+                           delete_created_spreadsheets, delete_sheets,
                            manipulate_google_sheet, rename_sheet)
 from excel_openpyxl import (LOCAL_EXCEL_PATH, automate_excel_sheet_create,
                             automate_excel_spreadsheet_import,
@@ -114,7 +114,7 @@ def run():
             ]
         )
 
-    explore_project_ex__employees_spreadsheet()
+    # explore_project_ex__employees_spreadsheet()
 
     def explore_gspread():
         """Execute functions excel_gspread"""
@@ -140,11 +140,23 @@ def run():
             update_content=['A1', 'New Spreadsheet']
         )
 
-        # Deleting spreadsheets
-        # clear_created_spreadsheets()
+        # Deleting spreadsheets ( not worksheet )
+        delete_created_spreadsheets()
 
-        rename_sheet(spreadsheet_title, 'New Spreadsheet', 'sheetplop')
-    # explore_gspread()
+        # Rename sheet
+        rename_sheet(
+            spreadsheet_title,
+            new_spreadsheet.sheet1.title,
+            'sheetplop'
+        )
+
+        # Create sheets ( worksheet )
+        create_sheets(spreadsheet_title, ['one', 'two', 'three'])
+
+        # Delete sheets ( worksheet )
+        delete_sheets(spreadsheet_title, ['three'])
+
+    explore_gspread()
 
 
 run()

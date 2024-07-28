@@ -80,7 +80,6 @@ def manipulate_google_sheet(update_content=['A1', 'Hello'], filename='python-aut
     '''Access and manipulate a google spreadsheet'''
     print('\n[[ GSpread ] Automate excel sheet - manipulate: access > edit > save ]')
     spreadsheet = get_google_spreadsheet(GOOGLE_CLIENT, filename)
-    print('----', spreadsheet.title)
     # Accessing the worksheet
     worksheet = spreadsheet.sheet1
 
@@ -97,7 +96,8 @@ def manipulate_google_sheet(update_content=['A1', 'Hello'], filename='python-aut
     update_and_save(*update_content)
 
     # Showing the content in browser
-    print('Updated values on sheet', worksheet.get_values())
+    print(f'Updated values on sheet {
+          worksheet.title}:', worksheet.get_values())
 
     # Saving the changes - automatically closes
 
@@ -141,8 +141,8 @@ def create_and_share_google_sheet(filename="python created excel sheet", email=C
     return spreadsheet
 
 
-def clear_created_spreadsheets(filename=None):
-    '''Delete one or all service account spreadsheet'''
+def delete_created_spreadsheets(filename=None):
+    '''Delete one or all service account spreadsheets'''
     spreadsheet_list = GOOGLE_CLIENT.openall()
     print(
         '\t\t> Number List[Spreadsheet]',
@@ -169,5 +169,55 @@ def clear_created_spreadsheets(filename=None):
 def rename_sheet(filename, sheet_old_name: str, sheet_new_name: str):
     _log('Rename Sheet')
     spreadsheet = GOOGLE_CLIENT.open(filename)
-    # print('SHEETTTT??', spreadsheet.worksheet(sheet_old_name))
-    # spreadsheet[sheet_old_name].title = new_name
+
+    worksheet = spreadsheet.worksheet(sheet_old_name)
+
+    worksheet.update_title(sheet_new_name)
+
+    print(f'Successfully renamed {sheet_old_name} to {sheet_new_name}')
+
+
+def create_sheets(filename, sheets_titles):
+    '''create_sheets Create sheets for a given list of titles
+
+    Args:
+            filename (str): google spreadsheet
+            sheets_titles (list): list of title names
+    '''
+    _log('Create sheets')
+
+    spreadsheet = GOOGLE_CLIENT.open(filename)
+    for title in sheets_titles:
+        try:
+            existing_sheet = spreadsheet.worksheet(title)
+        except:
+            print(f'Failing to create existing "{title}" sheet')
+            existing_sheet = None
+
+        # Create if does not exist
+        if existing_sheet is None:
+            spreadsheet.add_worksheet(title, 50, 50)
+            print(f'Successfully created sheet "{title}".')
+
+
+def delete_sheets(filename, sheets_titles):
+    '''create_sheets Create sheets for a given list of titles
+
+    Args:
+            filename (str): google spreadsheet
+            sheets_titles (list): list of title names
+    '''
+    _log('Create sheets')
+
+    spreadsheet = GOOGLE_CLIENT.open(filename)
+    for title in sheets_titles:
+        try:
+            existing_sheet = spreadsheet.worksheet(title)
+        except:
+            print(f'Failing in finding "{title}" sheet')
+            existing_sheet = None
+
+        # Delete if exists
+        if existing_sheet is not None:
+            spreadsheet.del_worksheet(existing_sheet)
+            print(f'Successfully deleted sheet "{title}".')
