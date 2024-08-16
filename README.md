@@ -1,27 +1,26 @@
 # Python
-## Resources ( zip )
+- Resources ( zip )
 https://cdn.fs.teachablecdn.com/cBpbX3XSyqrkGLkBD1q0
+- Requirements x tools: Python
 
-## Project How to use 
-### Requirements
-- python
+  
+> [!TIP]
+> # How to use / Projects commands
+>  *[ Not included in course - just develop this for DX purposes ]*
+> 
+>      A custom script CLI helps piloting the project to run different  
+>      seen parts on the course - either the presentations of some  
+>      concepts or practices or exercises.  
+> The commands implementations are in `main.py`  with 2 categories: `program` and `project`  
+> - **Running programs**   
+> `python main.py program <[ intro | files | regexp |excel ]>`  
+> Example: python `python main.py program intro`
+>
+> - **Running projects**  
+> `python main.py project <[ files | paths | regexp | regexp2 ]>`  
+> Example: python `python main.py program files`  
 
-## Commands to execute
-[ Not included in course - just develop this for DX purposes ]
-A custom script CLI helps piloting the project to run different
-seen parts on the course - either the presentations of some
-concepts or practices or exercises.
 
-The commands implementations are in `main.py`
-with 2 categories: `program` and `project`
-
-- Running programs
-`python main.py program <[ intro | files | regexp |excel ]>`
-Example: python `python main.py program intro`
-
-- Running projects
-- `python main.py project <[ files | paths | regexp | regexp2 ]>`
-Example: python `python main.py program files`
 
 
 
