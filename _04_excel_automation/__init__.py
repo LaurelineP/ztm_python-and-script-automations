@@ -9,10 +9,12 @@ from excel_gspread import (connect_to_google_account,
                            create_and_share_google_sheet, create_sheets,
                            delete_created_spreadsheets, delete_sheets,
                            manipulate_google_sheet, rename_sheet)
-from excel_openpyxl import (LOCAL_EXCEL_PATH, automate_excel_sheet_create,
+from excel_openpyxl import CURRENT_DIR as CTX_DIX
+from excel_openpyxl import (LOCAL_EXCEL_PATH, LOCAL_SAMPLE_EMPLOYEES_RANTING,
                             automate_excel_spreadsheet_import,
-                            create_spreadsheet_sheet,
-                            delete_spreadsheet_sheets,
+                            create_local_excel_file, create_spreadsheet_sheet,
+                            delete_spreadsheet_sheets, do_excel_from_data,
+                            get_and_adjust_cells_range, manipulate_cells,
                             rename_spreadsheet_sheet)
 from inner_module_utils import (load_custom_utils, load_module,
                                 load_module_from_path)
@@ -38,42 +40,71 @@ def run():
     def explore_openpyxl():
         """Execute functions excel_openpyxl"""
 
-        log('EXCEL AUTOMATION - OPENPYXL')
-        # 1.create local excel file
-        new_worksheet = automate_excel_sheet_create()
+        # log('EXCEL AUTOMATION - OPENPYXL')
+        # # 1.create local excel file
+        # new_worksheet = create_local_excel_file()
 
-        # 2. import content from local excel file
-        workbook = automate_excel_spreadsheet_import()
-        worksheets = workbook.worksheets
+        # # 2. import content from local excel file
+        # workbook = automate_excel_spreadsheet_import()
+        # worksheets = workbook.worksheets
 
-        # 3. create a new spreadsheet sheet
-        sheet = create_spreadsheet_sheet(
-            LOCAL_EXCEL_PATH, 'new_sheeeeeet'
+        # # 3. create a new spreadsheet sheet
+        # sheet = create_spreadsheet_sheet(
+        #     LOCAL_EXCEL_PATH, 'new_sheeeeeet'
+        # )
+        # # print('---sheet', sheet)
+
+        # rename_spreadsheet_sheet(
+        #     LOCAL_EXCEL_PATH,
+        #     'new_sheeeeeet4',
+        #     'EXCEL SHEET'
+        # )
+
+        # # deleting a spreadsheet sheet
+        # sheets_to_remove = []
+        # for _sh in worksheets:
+        #     if _sh.title not in ['Sheet', 'EXCEL SHEET']:
+        #         sheets_to_remove.append(_sh.title)
+
+        # updated_workbook = delete_spreadsheet_sheets(
+        #     LOCAL_EXCEL_PATH,
+        #     sheets_to_remove
+        # )
+
+        # _workbook_content = list(map(
+        #     lambda v: v.title,
+        #     updated_workbook
+        # ))
+        # print('\n\n\n--- [ 📌 Workbook Content ]\n------>', _workbook_content)
+
+        # -------------------------------- CELL FOCUS -------------------------------- #
+        manipulate_cells(LOCAL_EXCEL_PATH, 'EXCEL SHEET', [])
+
+        # Ranges [ read, write ]
+        ''' Observing the file:
+                        - as a reader, deduct range for all values in order to have the cell range
+                        - function will get the range
+                        - function will adjust:
+                                        - the invalid string cells to empty string
+                                        - the invalid number ( n < 0 -> 0 or n > 10 -> 10)
+                        - and save this into a new file into the generated folder
+            '''
+        cells_range = get_and_adjust_cells_range(
+            LOCAL_SAMPLE_EMPLOYEES_RANTING, 'Ratings', 'b3:e11')
+        print(f'\t> Cells Range: \n\t> {cells_range}')
+
+        # data to file
+        data_to_excel = [
+            ['Products', 'Category', 'Price'],
+            ['Iphone', 'Electronic', '1500'],
+            ['Eternal Sunshine of the spotless mind', 'culture', '15'],
+            ['Sneakers', 'Footwear', '150'],
+            ['Dictionary', 'Book', '30'],
+        ]
+        do_excel_from_data(
+            filepath=CTX_DIX / 'generated' / 'data_to_excel.xlsx',
+            data=data_to_excel
         )
-        # print('---sheet', sheet)
-
-        rename_spreadsheet_sheet(
-            LOCAL_EXCEL_PATH,
-            'new_sheeeeeet4',
-            'EXCEL SHEET'
-        )
-
-        # deleting a spreadsheet sheet
-        sheets_to_remove = []
-        for _sh in worksheets:
-            if _sh.title not in ['Sheet', 'EXCEL SHEET']:
-                sheets_to_remove.append(_sh.title)
-
-        updated_workbook = delete_spreadsheet_sheets(
-            LOCAL_EXCEL_PATH,
-            sheets_to_remove
-        )
-
-        _workbook_content = list(map(
-            lambda v: v.title,
-            updated_workbook
-        ))
-        print('\n\n\n--- [ 📌 Workbook Content ]\n------>', _workbook_content)
 
     explore_openpyxl()
 
@@ -96,12 +127,12 @@ def run():
             (f'a{idx+1}', name) for idx, name in enumerate(employees_names)
         ]
 
+        # ---------------------------------- Project --------------------------------- #
         # Dynamically attribute cells to an employee - creating an employee cells collection
         employees_sheet_values = [
             [('a1', f'Hello {name}!')] for name in employees_names
         ]
 
-        # ---------------------------------- Project --------------------------------- #
         generate_employees(
             file_path,
             # Sheet to create
@@ -113,6 +144,8 @@ def run():
                 *employees_sheet_values
             ]
         )
+
+        # ----------------------------- CELL MANIPULATION ---------------------------- #
 
     # explore_project_ex__employees_spreadsheet()
 
@@ -156,7 +189,7 @@ def run():
         # Delete sheets ( worksheet )
         delete_sheets(spreadsheet_title, ['three'])
 
-    explore_gspread()
+    # explore_gspread()
 
 
 run()

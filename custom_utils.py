@@ -18,7 +18,7 @@ def gen_log(string, is_upper):
         string (_type_): _description_
         is_upper (bool): _description_
     """
-        # default constants
+    # default constants
     _line_length = 56
     _char = "="
     _char_spaces_num = 2
@@ -46,7 +46,7 @@ def gen_log(string, is_upper):
         "full_line": full_line,
         "string": _string,
         "line_length": _line_length,
-        "char" : _char
+        "char": _char
     }
 
 
@@ -66,15 +66,13 @@ def log(string, is_upper=True):
 
     half_space_line_count = missing_char // 2
     half_space_line = " " * half_space_line_count
-    
-    line =  half_space_line + line_content
-    
-    block = f'\n\n{ full_line }\n{ line }\n'
+
+    line = half_space_line + line_content
+
+    block = f'\n\n{full_line}\n{line}\n'
 
     print(block)
     return line
-
-
 
 
 def log_header(string, is_upper=True):
@@ -97,14 +95,14 @@ def log_header(string, is_upper=True):
     _line_length = log_details['line_length']
     _char = log_details['char']
 
-    # Construct lines block
-    line_content = f'{char_fill}  {_string}  {char_fill}'
+    # Constructs lines block
+    line_content = f'{char_fill} {_string}  {char_fill}'
     missing_char_count = _line_length % len(line_content)
     line = _char + line_content \
         if missing_char_count \
         else line_content
 
-    block = f'\n\n{ full_line }\n{ line }\n{ full_line }\n'
+    block = f'\n\n{full_line}\n{line}\n{full_line}\n'
 
     print(block)
     return line
@@ -128,15 +126,15 @@ def log_object(obj):
             else:
                 details['properties'].append(prop)
 
-    print_msg_properties = f'   > 💡️"{obj.__name__}" {len(details["properties"])} properties: \n\t '
-    print_msg_methods = f'   > 💡️"{obj.__name__}" {len(details["methods"])} methods: \n\t '
+    print_msg_properties = f'   > 💡️"{obj.__name__}" {
+        len(details["properties"])} properties: \n\t '
+    print_msg_methods = f'   > 💡️"{obj.__name__}" {
+        len(details["methods"])} methods: \n\t '
     print(print_msg_properties, details["properties"])
     print(print_msg_methods, details["methods"])
     return details
 
 
-
-    
 # ---------------------------------------------------------------------------- #
 #                                  FILE SYSTEM                                 #
 # ---------------------------------------------------------------------------- #

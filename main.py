@@ -1,18 +1,15 @@
 """
-    Main module - gathers all covered code, 
-    and also allows to control which section we would like 
+    Main module - gathers all covered code,
+    and also allows to control which section we would like
     to launch from command line
 """
 
 
+import importlib.util as importlib
 import os
 import pathlib
+import subprocess
 import sys
-import importlib.util as importlib
-
-CURRENT_FOLDER = os.path.dirname(os.path.abspath(__file__))
-FILE_INPUTS_FOLDER = 'file_inputs'
-FILE_OUTPUTS_FOLDER = 'file_outputs'
 
 import _00_introduction_and_installations as intro
 import _01_working_with_files.csv_data_manipulation as csv_manip
@@ -24,14 +21,14 @@ import _02_path_and_folders as paths
 import _02_path_and_folders.project__files_and_folder_cleaner as project2
 import _03_regular_expressions as regexp
 import _03_regular_expressions.project__contact_info_extractor as project3
+from custom_utils import log_header
+
+CURRENT_FOLDER = os.path.dirname(os.path.abspath(__file__))
+FILE_INPUTS_FOLDER = 'file_inputs'
+FILE_OUTPUTS_FOLDER = 'file_outputs'
 
 
 # import _04_excel_automation as excel
-
-
-from custom_utils import log_header
-import subprocess
-
 
 
 # 00 - Working with files
@@ -104,7 +101,8 @@ def run_working_with_files():
     # ---------------------------- MANIPULATE CSV DATA --------------------------- #
     csv_manip.manipulate_csv(
         f'{FILE_INPUTS_FOLDER}/sample-movies__to-manipulate.csv',
-        file_output=f'{FILE_OUTPUTS_FOLDER}/sample-movies__to-manipulate__output.csv',
+        file_output=f'{
+            FILE_OUTPUTS_FOLDER}/sample-movies__to-manipulate__output.csv',
     )
 
 
@@ -162,19 +160,17 @@ def run_excel():
     # -------------------------------- SOLUTION 1 --------------------------------
     def run_venv():
         """Runs the venv python and executes the module"""
-        venv_python = os.path.join(CURRENT_FOLDER, '_04_excel_automation', '_venv_/bin/python3')
-        module_path = os.path.join(CURRENT_FOLDER, '_04_excel_automation/__init__.py')
+        venv_python = os.path.join(
+            CURRENT_FOLDER, '_04_excel_automation', '_venv_/bin/python3')
+        module_path = os.path.join(
+            CURRENT_FOLDER, '_04_excel_automation/__init__.py')
         subprocess.run([venv_python, module_path])
-        
+
     run_venv()
-    
-	# -------------------------------- SOLUTION 2: ------------------------------- #
+
+    # -------------------------------- SOLUTION 2: ------------------------------- #
     # https://www.geeksforgeeks.org/python-import-module-outside-directory/
 
-    
-
-
-	
     # print('excel run', excel)
     # print(x)
     # excel.run()
@@ -240,15 +236,18 @@ try:
     }
 
     print(sys.argv)
+    if len(sys.argv) < 3:
+        raise ValueError('[ Missing command arguments ]')
     _this_file, category, instruction = sys.argv
 
     if category == 'program':
         programs[instruction]()
     if category == 'project':
         projects[instruction]()
-except (AttributeError, KeyError) as error:
+
+except (AttributeError, KeyError, ValueError) as error:
     log_header("🔥 Error")
-    print('\t==> error:', error)
-    print('Invalid program, here are the possible commands:"')
-    print('\t> programs', list(programs.keys()),
-          '\n\t>projects', list(projects.keys()))
+    print('Error:', error)
+    print('Invalid command, here are the possible commands:"')
+    print('\t> python main.py program', list(programs.keys()),
+          '\n\t> python main.py project', list(projects.keys()))
