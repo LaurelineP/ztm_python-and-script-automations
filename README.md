@@ -69,7 +69,7 @@ say_name( "Lowla" )
 # 'Lowla'
 ```
 
-### Built in function
+### Built in functions
 Python has its own functions we can use
 
 ```py
@@ -92,8 +92,13 @@ float(123)
 ## 📌 Expressions
 An expression is a statement evaluated in the code such as conditions   
 for instance, using built in keywords.
-A combination of values and operators ( =, -, + , etc... )
+Generally these expressions evaluations relies on some logic often
+expressed using comparison operators : ( =, -, + , etc... )
+- Conditions are expressions ( if ... elif ... else ... finally )
+- Functions can be expressions ( lambdas ) 
+- Inline evaluations are expressions ( `1 + 1` )
 
+  
 ### Special operators
 `//` integer division operators --> will enforce to return an integer  
 `%` modulo operator --> return the remainder of a division
@@ -274,7 +279,7 @@ To create a comment: we need to add "#" at the beginning of the line
 ```py
 # This is a comment
 ```
-- multi line comments
+- multi-line comments
 To create a comment: we need to add "```" at the beginning of the line
 this is called doc string
 ```py
@@ -547,7 +552,7 @@ the file within can be imported - without it you might go crazy while trying to 
 
 
 
-### Useful modules 
+### 🔹 Useful modules 
 | Module | Description |
 | ------ | ----------- |
 | datetime | anything related to dates |
@@ -571,155 +576,129 @@ new_years_day = datetime.datetime(year=now.year + 1, month=1, day=1)
 ## 📌 Installing Python & PyCharm
 ### 🔹 Installing Python ( mac )
 
-Step 1: Check for Existing Python Installation
-Before installing a new version of Python, it's a good idea to check if you already have Python installed on your Mac, which can sometimes be the case.
-
-1. Open Terminal: You can find Terminal in the Applications folder under Utilities, or simply search for it using Spotlight (Cmd + Space).
-
-2. Check Python Version: Type python --version or python3 --version and press Enter. If Python is installed, this will display the version number.
-
-
-
-Step 2: Download Python
-To download the latest version of Python:
-
-1. Visit the Python Website: Open your web browser and go to the official Python website](https://www.python.org/).
-
-2. Download Python: Click on "Downloads" and select the latest version for macOS. The website typically detects your OS and suggests the appropriate version.
+> 🔸 Step 1: Check for Existing Python Installation
+> Before installing a new version of Python, it's a good idea to check if you already have Python installed on your Mac, which can 
+> sometimes be the case.
+>
+> 1. Open Terminal: You can find Terminal in the Applications folder under Utilities, or simply search for it using Spotlight (Cmd + Space).
+> 2. Check Python Version: Type python --version or python3 --version and press Enter. If Python is installed, this will display the version number.
 
 
 
-Step 3: Install Python 
-Once the download is complete:
-
-1. Open the Installer: Locate the downloaded file (typically in the Downloads folder) and double-click on it.
-
-2. Follow Installation Steps: The installer will guide you through the process. Make sure to select the option "Install launcher for all users" and "Add Python to PATH" if available.
-
-3. Complete Installation: Click “Install” and enter your admin password if prompted.
+> 🔸 **Step 2: Download Python**
+> To download the latest version of Python:
+>
+> 1. Visit the Python Website: Open your web browser and go to the official Python website](https://www.python.org/).
+> 2. Download Python: Click on "Downloads" and select the latest version for macOS. The website typically detects your OS and suggests the appropriate version.
 
 
 
-Step 4: Verify Installation
-After installation: 
+> 🔸 **Step 3: Install Python** 
+> Once the download is complete:
+>
+> 1. Open the Installer: Locate the downloaded file (typically in the Downloads folder) and double-click on it.
+> 2. Follow Installation Steps: The installer will guide you through the process. Make sure to select the option "Install launcher for all users" and "Add Python to PATH" if available.
+> 3. Complete Installation: Click “Install” and enter your admin password if prompted.
 
-1. Open Terminal Again: As in Step 1.
-
-2. Check the Version: Type python3 --version and press Enter. This should display the newly installed Python version.
 
 
+> 🔸 **Step 4: Verify Installation**
+> After installation: 
+>
+> 1. Open Terminal Again: As in Step 1.
+> 2. Check the Version: Type python3 --version and press Enter. This should display the newly installed Python version.
 
-Step 5: Install pip (If Not Included)
-pip is Python's package manager and is used to install Python packages. It usually comes with Python, but if not:
 
-1. Download get-pip.py: Visit https://bootstrap.pypa.io/get-pip.py, and download the get-pip.py script.
 
-2. Run the Script: In Terminal, navigate to the download location and run python3 get-pip.py.
+> 🔸 **Step 5: Install pip (If Not Included)**
+> pip is Python's package manager and is used to install Python packages. It usually comes with Python, but if not:
+> 
+> 1. Download get-pip.py: Visit https://bootstrap.pypa.io/get-pip.py, and download the get-pip.py script.
+> 2. Run the Script: In Terminal, navigate to the download location and run python3 get-pip.py.
 
 
 
 ### 🔹 Install Pycharm ( mac )
-Prerequisites
-- macOS: Ensure your Mac is running on macOS 10.13 (High Sierra) or later.
-
-- Internet Connection: You'll need a stable internet connection to download PyCharm.
-
-- Admin Rights: Be sure you have administrative privileges on your Mac to install new software.
+> Prerequisites
+> - macOS: Ensure your Mac is running on macOS 10.13 (High Sierra) or later.
+> - Internet Connection: You'll need a stable internet connection to download PyCharm.
+> - Admin Rights: Be sure you have administrative privileges on your Mac to install new software.
 
 
 
-Step 1: Downloading PyCharm
-1. Open your Web Browser: Launch Safari, Chrome, or any other browser.
-
-2. Visit the JetBrains Website: Go to the JetBrains official website.
-
-3. Select the Edition: Choose between the Community Edition (free) and the Professional Edition (paid). Click on the “Download” button for the Community Edition.
-
-4. Start the Download: The download should start automatically. If it doesn’t, click on the direct link provided on the webpage.
+> 🔸 **Step 1: Downloading PyCharm**
+> 1. Open your Web Browser: Launch Safari, Chrome, or any other browser.
+> 2. Visit the JetBrains Website: Go to the JetBrains official website.
+> 3. Select the Edition: Choose between the Community Edition (free) and the Professional Edition (paid). Click on the “Download” button for the Community Edition.
+> 4. Start the Download: The download should start automatically. If it doesn’t, click on the direct link provided on the webpage.
 
 
 
-Step 2: Installing PyCharm
-1. Open the Downloaded File: Locate the downloaded .dmg file in your “Downloads” folder and double-click to open it.
-
-2. Install PyCharm: A new window will appear with the PyCharm icon and the “Applications” folder. Drag the PyCharm icon to the “Applications” folder. This will copy PyCharm into your Applications.
-
-3. Wait for the Copy to Finish: This might take a few minutes depending on your Mac's performance.
+> 🔸 **Step 2: Installing PyCharm**
+> 1. Open the Downloaded File: Locate the downloaded .dmg file in your “Downloads” folder and double-click to open it.
+> 2. Install PyCharm: A new window will appear with the PyCharm icon and the “Applications” folder. Drag the PyCharm icon to the “Applications” folder. This will copy PyCharm into your Applications.
+> 3. Wait for the Copy to Finish: This might take a few minutes depending on your Mac's performance.
 
 
 
-Step 3: Running PyCharm
-1. Open PyCharm: Go to your “Applications” folder and find PyCharm. Double-click to open it.
-
-2. Initial Setup: The first time you open PyCharm, you’ll go through an initial setup process. This includes accepting the license agreement and configuring the IDE according to your preferences (like choosing a theme).
+🔸 **Step 3: Running PyCharm**
+> 1. Open PyCharm: Go to your “Applications” folder and find PyCharm. Double-click to open it.
+> 2. Initial Setup: The first time you open PyCharm, you’ll go through an initial setup process.
+> This includes accepting the license agreement and configuring the IDE according to your preferences (like choosing a theme).
 
 ### 🔹 Installing Python ( windows )
-Step 1: Download Python
-1. Visit the Official Python Website: Open your web browser and go to the official Python website.
-
-2. Select the Version: Click on the 'Downloads' tab. The website typically suggests the latest version for Windows.
-
-3. Download the Installer: Click on the link to download the Python installer for Windows.
+> 🔸 **Step 1: Download Python**
+> 1. Visit the Official Python Website: Open your web browser and go to the official Python website.
+> 2. Select the Version: Click on the 'Downloads' tab. The website typically suggests the latest version for Windows.
+> 3. Download the Installer: Click on the link to download the Python installer for Windows.
 
 
 
-Step 2: Run the Installer
-1. Locate the Installer: After the download is complete, locate the installer file, usually in your 'Downloads' folder.
-
-2. Start Installation: Double-click the installer file to begin the installation process.
-
-3. Select Installation Options:
-
-  - Check 'Add Python to PATH': Before proceeding, make sure to tick the checkbox that says “Add Python to PATH”. This step is crucial as it allows you to run Python from the Command Prompt.
-
-  - Choose Install Location: You can select the default location (recommended) or choose a specific location for Python installation.
-
-4. Begin Installation: Click on “Install Now” (recommended) or “Customize Installation” if you need to change any settings.
+>🔸 **Step 2: Run the Installer
+> 1. Locate the Installer: After the download is complete, locate the installer file, usually in your 'Downloads' folder.
+> 2. Start Installation: Double-click the installer file to begin the installation process.
+> 3. Select Installation Options:
+>
+>  - Check 'Add Python to PATH': Before proceeding, make sure to tick the checkbox that says “Add Python to PATH”.
+> This step is crucial as it allows you to run Python from the Command Prompt.
+>
+> - Choose Install Location: You can select the default location (recommended) or choose a specific location for Python installation.
+> 4. Begin Installation: Click on “Install Now” (recommended) or “Customize Installation” if you need to change any settings.
 
 
 
-Step 3: Verify the Installation 
-1. Open Command Prompt: After the installation is complete, open the Command Prompt.
-
-2. Check Python Version: Type python --version and press Enter. This command should return the version of Python you installed.
-
-3. Verify Pip Installation: Type pip --version to ensure that pip (Python's package installer) is also installed.
+> 🔸 **Step 3: Verify the Installation** 
+> 1. Open Command Prompt: After the installation is complete, open the Command Prompt.
+> 2. Check Python Version: Type python --version and press Enter. This command should return the version of Python you installed.
+> 3. Verify Pip Installation: Type pip --version to ensure that pip (Python's package installer) is also installed.
 
 ### 🔹 Installing Pycharm ( windows )
-Prerequisites
-- macOS: Ensure your Mac is running on macOS 10.13 (High Sierra) or later.
-
-- Internet Connection: You'll need a stable internet connection to download PyCharm.
-
-- Admin Rights: Be sure you have administrative privileges on your Mac to install new software.
+> 🔸 **Prerequisites**
+> - macOS: Ensure your Mac is running on macOS 10.13 (High Sierra) or later.
+> - Internet Connection: You'll need a stable internet connection to download PyCharm.
+> - Admin Rights: Be sure you have administrative privileges on your Mac to install new software.
 
 
-
-Step 1: Downloading PyCharm
-1. Open your Web Browser: Launch Safari, Chrome, or any other browser.
-
-2. Visit the JetBrains Website: Go to the JetBrains official website.
-
-3. Select the Edition: Choose between the Community Edition (free) and the Professional Edition (paid). Click on the “Download” button for the Community Edition.
-
-4. Start the Download: The download should start automatically. If it doesn’t, click on the direct link provided on the webpage.
+> 🔸 **Step 1: Downloading PyCharm**
+> 1. Open your Web Browser: Launch Safari, Chrome, or any other browser.
+> 2. Visit the JetBrains Website: Go to the JetBrains official website.
+> 3. Select the Edition: Choose between the Community Edition (free) and the Professional Edition (paid). Click on the “Download” button for the Community Edition.
+> 4. Start the Download: The download should start automatically. If it doesn’t, click on the direct link provided on the webpage.
 
 
 
-Step 2: Installing PyCharm
-1. Open the Downloaded File: Locate the downloaded .dmg file in your “Downloads” folder and double-click to open it.
+> 🔸 **Step 2: Installing PyCharm**
+> 1. Open the Downloaded File: Locate the downloaded .dmg file in your “Downloads” folder and double-click to open it.
+> 2. Install PyCharm: A new window will appear with the PyCharm icon and the “Applications” folder. Drag the PyCharm icon to the “Applications” folder. This will copy PyCharm into your Applications.
+> 3. Wait for the Copy to Finish: This might take a few minutes depending on your Mac's performance.
 
-2. Install PyCharm: A new window will appear with the PyCharm icon and the “Applications” folder. Drag the PyCharm icon to the “Applications” folder. This will copy PyCharm into your Applications.
-
-3. Wait for the Copy to Finish: This might take a few minutes depending on your Mac's performance.
-
-Step 3: Running PyCharm
-1. Open PyCharm: Go to your “Applications” folder and find PyCharm. Double-click to open it.
-
-2. Initial Setup: The first time you open PyCharm, you’ll go through an initial setup process. This includes accepting the license agreement and configuring the IDE according to your preferences (like choosing a theme).
+> 🔸 **Step 3: Running PyCharm**
+> 1. Open PyCharm: Go to your “Applications” folder and find PyCharm. Double-click to open it.
+> 2. Initial Setup: The first time you open PyCharm, you’ll go through an initial setup process.
+> This includes accepting the license agreement and configuring the IDE according to your preferences (like choosing a theme).
 
 
-## 🔹 Venv / Virtual Environment
+## 📌 Venv / Virtual Environment
 Virtual Environment enables to install the required environment to run a project.
 This allows to install contain the installed external packages for the project use
 and to use the right version of python.
@@ -727,14 +706,14 @@ Note: `venv` is commonly used as the name of the virtual environment but could
 be different
 
 
-### 1. Creating a virtual environment (CLI)
+### 🔹 1. Creating a virtual environment (CLI)
 Will create a new folder that will contain an "image" of the python version your  
 machine is referring to. This will be in this folder that all the package will be
 installed once the environment enabled
 `python -m venv` : create a virtual environment - by default this would be called `venv`
 `python -m venv _venv_`: this example would create a virtual environment called `_venv_`
 
-### 2. Activating the virtual environment (CLI)
+### 🔹 2. Activating the virtual environment (CLI)
 Allows to request the context of the project folder virtual environment.
 *"Use this python version and context*
 - typing `activate` in the virtual environment parent folder
@@ -753,12 +732,12 @@ Allows to request the context of the project folder virtual environment.
   - with `cmd.exe`       : `C:\> <venv>\Scripts\activate.bat`
   - with `powershell`    : `C:\> <venv>\Scripts\Activate.ps1`
 
-### 3. Install packages
+### 🔹 3. Install packages
 The Package Manager to install external packages: `pip` or `pip3`  
 which is was installed along Python
 `pip install <package-name>`
 
-### 4. Use the installed package 
+### 🔹 4. Use the installed package 
 Now that your venv is contextualize and you've installed a package,  
 you can import it in a file under the project
 
@@ -786,7 +765,7 @@ The most basic files - computer files containing un-formatting text
   - For Notes and reminders
   - For data exchange
 
-#### Reading and writing a text file
+#### 🔸 Reading and writing a text file
 Using "open" built-in function 
 1. open the file ( result as probably some binary content )
 3. specify the mode: describe what action will be
@@ -807,7 +786,7 @@ Using "open" built-in function
 | `.writelines(<string-list>)` | write into a file a new line, automatically goes at a new line |
 
 
-##### FIRST WAY - OPEN AND CLOSE
+##### ➡️ FIRST WAY - OPEN AND CLOSE
 ```py
 open(<file>, <mode>) as file:
   # ....
@@ -817,7 +796,7 @@ open(<file>, <mode>) as file:
   #   - 'r': to read a file
 ```
 
-##### SECOND WAY - OPEN AND AUTOMATICALLY CLOSE USING WITH
+##### ➡️ SECOND WAY - OPEN AND AUTOMATICALLY CLOSE USING WITH
 ```py
 with open(<file>, <mode>) as file:
   # ....
@@ -832,7 +811,7 @@ This module takes a file binary as first argument, and returns a reader `csv.rea
 
 There is a built-in module called `csv` that is available from python.
 
-#### Reading CSV
+#### 🔸 Reading CSV
 Note - reading and 
 1. open the file as we previously did: with `with open(<filepath>, 'r')`
 2. read the csv `csv_reader = csv.reader(file)`: gives a file content iterable
@@ -844,7 +823,7 @@ starts at the first row of values instead of the headers.
 6. read the whole content: `.read()`
 
 
-#### Writing CSV
+#### 🔸 Writing CSV
 2 possibilities
 1. open the file as we previously did: with `with open(<filepath>, 'w') as csv_file:`
 2. using the `csv` built-in module:
@@ -858,7 +837,7 @@ with open(<filepath>, 'w') as csv_file:
   # write multiple lines at once
   csv_writer.writelines([[ 'name', 'age' ], [ 'Lowla', 100 ]])
 ```
-### Manipulating CSV Data - Example
+### 🔹 Manipulating CSV Data - Example
 ### Process:
 - should read file and get its content
 - transform these into string in order to manipulate them
@@ -867,15 +846,16 @@ following file generation
 - generate the CSV file 
 
 
-## 🗂️ Project: Input - Output
+### 🔹 🗂️ Project: Input - Output
 ### Original instructions
 - create a csv file with dad jokes or refers to original course content, to get the file
 - from this file, generate another CSV file with an extra column
 - this column will have values representing, in a human friendly way, an interpretation   
 the vote value 2
 
+-----
 
-## 🔹 PATHS AND FOLDERS
+## 📌 PATHS AND FOLDERS
 Using Python built-in module `pathlib`
 ```py
 Path(<path-string>)
@@ -901,7 +881,7 @@ Path(<path-string>)
   .iterdir();
 ```
 
-### Create folders
+### 🔹 Create folders
 ```py
 Path(<path-string>)
  # create a directory
@@ -913,7 +893,7 @@ Path(<path-string>)
     .mkdir(exist_ok = True, parents: True)
 ```
 
-### Copy / renaming and removing files & folders
+### 🔹 Copy / renaming and removing files & folders
 Using Python built-in module `shutil` ( shell utils ? )
 ```py
 import shutil
@@ -939,7 +919,7 @@ path = Path(<path-string>)
 <path>.rmtree()
 ```
 
-### Project 
+### 🔹 🗂️ Project 
 [Project -  files and folder cleaner](./_02_path_and_folders/project__files_and_folder_cleaner/)
 Guideline
 - The folder that will be created "organized" which will contain the folders
@@ -958,7 +938,7 @@ disorganized
 - observe the folder and its content changed
 
 
-## 🔹 REGULAR EXPRESSIONS
+## 📌 REGULAR EXPRESSIONS
 Regular expression is a standardized tools that all programming languages
 used - once learnt, the knowledge on this is reusable
 It is a syntax describing patterns in a text
@@ -967,14 +947,14 @@ Website where we could try / test these pattern/
 
 [pythex](https://pythex.org/)
 
-## Basics
+### 🔹 Basics
 
 - `\` this allows to escapes key characters / or key syntax
 - `.` this represents any kind of alphabetical character
 - plain text
 
 
-### Special Characters in Regexp
+### 🔹 Special Characters in Regexp
 `\d` this represents any digits (0-9)
 `\D` this represents any non digit character
 `\w` this represents any alpha numeric characters
@@ -983,7 +963,7 @@ Website where we could try / test these pattern/
 `\S` this represents non white space
 
 
-### Matching Multiple Characters
+### 🔹 Matching Multiple Characters
 Brackets allows to match groups of following characters
 
 - `[]` used to match any characters specified in-between matching character
@@ -994,24 +974,24 @@ Brackets allows to match groups of following characters
 - `()` used to match exact following characters and create a group
 
 
-### Quantifiers
+### 🔹 Quantifiers
 Represents the number of instances the pattern should match 
 `?` matches **zero** or **one** instance of the previous character
 `+` matches **one or more** instances of the previous character
 `*` matches **zero** or more instances of the previous character
 
-### Custom Quantifiers
+### 🔹 Custom Quantifiers
 - `{<n>[, <n>]}` used as a quantifier - applied to the prepended pattern *n being a number*
   - `a{2}`: examples matching a sequence of 2 following `a`
   - `a{3,5}`: examples matching a sequence of 3 or 5 following `a` 
   - a{2,}: examples matching a sequence of 2 and mor following `a` 
 
-### Anchors
+### 🔹 Anchors
 - `^` denotes the start of a string
 - `$` denotes the end of a string
 
 
-### Regular Expression in Python
+### 🔹 Regular Expression in Python
 The built-in module `re` provides us with some interesting 
 tool to check a given string.
 
@@ -1020,26 +1000,26 @@ tool to check a given string.
 Raw string to express the regexp 
 `r''` - raw string - write regexp pattern in a string
 
-### Library Methods
+### 🔹 Library Methods
 - `.search( <REG>, <TEXT> )` >returns  None | Matched value - returning the first matched result
 - `.findall( <REG>, <TEXT> )` > returns a multiple values as a list of strings
 - `.sub(<REG>, <TEXT>, <REPLACEMENT-TXT>)` substitute found text with the string we pass
 
 
-#### Returned regexp methods
+#### 🔸 Returned regexp methods
 - `.group()`: value found in the match return object
 - `.group(<n>)`: value of the regexp group defined value
 
-### Alternation or OR
+### 🔹 Alternation or OR
 - Or operator with a pipe within a group
 `(cat|dog)` - regexp to say to match either "cat" or "dog"
 
-### Compilation flags
+### 🔹 Compilation flags
 - `IGNORECASE` flag: makes the matching case insensitive
 - `MULTILINE` flag: makes `^` and `$`  matching the entire lines rather than the entire string
 - `DOTALL`: makes the dot character match all character including new lines
 
-### Compile method ( from module re )
+### 🔹 Compile method ( from module re )
 This method enhance the performance, especially if a same regular expression
 is used several times ( in a loop for instance ) - but not all the time neither
 
@@ -1050,8 +1030,8 @@ is used several times ( in a loop for instance ) - but not all the time neither
 
 
 
-## Spreadsheets
-### Openpyxl package
+## 📌 Spreadsheets
+### 🔹 Openpyxl package
 Python Package allowing to use python to create spreadsheets
 new excel sheet, open existing sheet, read and write on a sheet
 through the google services
@@ -1062,13 +1042,13 @@ through the google services
 - Manipulating a file: opening it and modifying does not need manual
 file closing as it is automatic
 
-#### Installation in project
+#### 🔸 Installation in project
 - create and/or activate a virtual environment
 - add the package "openpyxl" `pip install openpyxl`
 
 
 
-#### OpenPyXl manipulations
+#### 🔸 OpenPyXl manipulations
 - create a file (xlsx): 
 ```py
 new_workbook = openpyxl.Workbook()
@@ -1122,12 +1102,12 @@ worksheet['A1'] = 'Hello'
 del workbook[0]
 ```
 
-### GSpread: Google Spread Sheet
+### 🔹 GSpread: Google Spread Sheet
 Package Automating all kind of google sheets operations from Python
 - create and/or activate a virtual environment
 - add the package "openpyxl" `pip install gspread`
 
-#### Google Spread Sheet x account x connection
+#### 🔸 Google Spread Sheet x account x connection
 A cloud system providing excel like sheets
 - sign-in to google account in google cloud console  
  to get an api key to use google spreadsheet ( or create an account )
@@ -1195,28 +1175,28 @@ A cloud system providing excel like sheets
     spreadsheet result
 
 
-#### GSpread: instantiating the google account
+#### 🔸 GSpread: instantiating the google account
   Now we can go back to code
   - import the `gspread` package
   - establish the connection using   
   `google_client = gspread.service_account(<json-file-path>)`
 
-##### Open existing spreadsheet
+##### ➡️ Open existing spreadsheet
   - spreadsheet obtained by opening the file with `google_client.open(<name-of-spreadsheet-created>)`
 
-##### Creating spreadsheet
+##### ➡️ Creating spreadsheet
 - `spreadsheet = GOOGLE_CLIENT.create(filename)`
 
-##### Updating spreadsheet 
+##### ➡️ Updating spreadsheet 
 _Spreadsheet_
   - updating the spreadsheet title: `spreadsheet.update_title(<new-name>)`
 
-##### Accessing spreadsheet sheets
+##### ➡️ Accessing spreadsheet sheets
 _Spreadsheet > sheet_
   - accessing the worksheet > current sheet: `spreadsheet.sheet1`
   - accessing the worksheet > a sheet: `spreadsheet.worksheet(<worksheet-title>)`
 
-##### Updating values (cells)
+##### ➡️ Updating values (cells)
 _Spreadsheet > sheet > cells_
   - editing / adding content to one cell - by cell address and value: `sheet.update_acell(<CELL>, <CONTENT>)`
   - editing / adding content to one cell - by row / col / coordinations   
