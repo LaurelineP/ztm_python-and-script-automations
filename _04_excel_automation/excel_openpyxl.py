@@ -23,37 +23,38 @@ LOCAL_SAMPLE_EMPLOYEES_RANTING = LOCAL_EXCEL_FOLDER / 'Employee Ratings.xlsx'
 
 def create_local_excel_file(filename=LOCAL_EXCEL_PATH, sheet_name='Sheet 1'):
     '''Create local exel file  - called workbook Then saves it'''
-    print('\n[[ OpenPyXl ] Automate excel spreadsheet - Create Spreadsheet ]')
+    print('\n[[ OpenPyXl ] Automate excel spreadsheet - Create/Load Spreadsheet ]')
     if not filename.exists():
         workbook = openpyxl.Workbook()
-        # workbook.create_sheet(sheet_name)
         workbook.save(filename)
-        return workbook
     else:
-        print('\n[[ OpenPyXl ] Automate excel spreadsheet - Create Spreadsheet ]')
         workbook = openpyxl.load_workbook(filename)
-        return workbook
 
-# Read excel content
+    workbook.create_sheet(sheet_name)
+    worksheet = workbook[sheet_name]
+
+    return workbook, worksheet, filename
+
+# Reads excel content
 
 
-def automate_excel_spreadsheet_import(filename=LOCAL_EXCEL_PATH):
+def automate_excel_spreadsheet_import(filename=LOCAL_EXCEL_PATH, sheet_name="Sheet"):
     """Import content of the excel sheet"""
     print('\n[[ OpenPyXl ] Automate excel spreadsheet - Edit Spreadsheet Sheet Cell ]')
 
     # workbook: represents excel sheet with openpyxl
     workbook = openpyxl.load_workbook(filename)
 
+    workbook.save(filename)
+
     # active first excel file sheet - where we add content
-    current_worksheet = workbook.active
+    current_worksheet = workbook[sheet_name]
 
     # cell targeting
     cell_a1 = current_worksheet['A1']
 
     # Modifying the cell
     current_worksheet['A1'] = 'Hello Excel'
-
-    workbook.save(filename)
 
     print('\t> [ ℹ️  workbook ]\t\t\t', workbook)
     print('\t> [ ℹ️  current worksheet ]\t\t', current_worksheet)
@@ -93,7 +94,7 @@ def create_spreadsheet_sheet(workbook_path, new_sheet_name):
     workbook.save(workbook_path)
 
     # Returns a sheet
-    return workbook[new_sheet_name]
+    return workbook, workbook[new_sheet_name], workbook_path
 
 
 def rename_spreadsheet_sheet(filepath, sheet_name, new_sheet_name):
@@ -122,7 +123,8 @@ def rename_spreadsheet_sheet(filepath, sheet_name, new_sheet_name):
             ))
             workbook.save(filepath)
             print(
-                '\t> [ Sheet Rename ] Sheet {sheet_name} renamed as {new_sheet_name}'
+                f'\t> [ Sheet Rename ] Sheet "{
+                    sheet_name}"" renamed as "{new_sheet_name}"'
             )
             return workbook
     except:
@@ -144,6 +146,8 @@ def delete_spreadsheet_sheets(filepath, sheet_names):
     '''
     print('\n[[ OpenPyXl ] Automate excel spreadsheet - Delete Spreadsheet sheets ]')
     workbook = openpyxl.load_workbook(filepath)
+    print('bforedelete ? workbook:', workbook.worksheets)
+
     for sheet_name in sheet_names:
         try:
             print(f'\t> [ Sheet Deletion ] Deleting "{sheet_name}"')
@@ -153,12 +157,13 @@ def delete_spreadsheet_sheets(filepath, sheet_names):
             print('\t\t> Could not delete sheet "{sheet_name}"')
 
     workbook.save(filepath)
+    print('delete ? workbook:', workbook.worksheets)
     return workbook
 
 
 # -------------------------------- CELLS FOCUS ------------------------------- #
 
-def manipulate_cells(filepath, sheet_name,  values):
+def manipulate_cells(filepath, sheet_name, values):
     '''manipulate_cells Manipulate cells
 
     Args:
@@ -169,31 +174,41 @@ def manipulate_cells(filepath, sheet_name,  values):
         '\n\n[[ OpenPyXl ] Automate excel spreadsheet - Manipulate Spreadsheet Sheet Cells ]')
 
     # workbook = spreadsheet
-    print('path', filepath)
+    print('\n\t-->path', filepath, '\n')
     workbook = openpyxl.load_workbook(filepath)
+    print('\t--> requested excel sheet:', sheet_name)
+    print('\t--> current sheets:', workbook.sheetnames)
+    try:
+        if not (filepath.exists() and sheet_name in workbook.sheetnames):
+            print('Sheet ${sheet_name} does not exist, creating')
+            workbook.create_sheet(sheet_name)
 
-    # worksheet = spreadsheet sheet
-    worksheet = workbook[sheet_name]
+        worksheet = workbook[sheet_name]
+        # ------------------------------ CELL BY ADDRESS ----------------------------- #
+        if not worksheet['a1'].value:
+            worksheet['a1'] = 'Hello world'
 
-    # ------------------------------ CELL BY ADDRESS ----------------------------- #
+        # spreadsheet sheet cell
+        cell_A1_details = worksheet['a1']
 
-    # spreadsheet sheet cell
-    cell_A1_details = worksheet['a1']
+        cell_A1_value = cell_A1_details.value
 
-    cell_A1_value = cell_A1_details.value
+        # reverse string
+        reversed_str = cell_A1_value[::-1]
 
-    # reverse string
-    reversed_str = cell_A1_value[::-1]
+        cell_A1_details = worksheet['a1']
 
-    cell_A1_details = worksheet['a1']
+        worksheet['a2'] = reversed_str
 
-    worksheet['a2'] = reversed_str
+        # --------------------------- CELL BY COORDINATION --------------------------- #
 
-    # --------------------------- CELL BY COORDINATION --------------------------- #
+        worksheet.cell(3, 1, reversed_str + '_duplicated')
 
-    worksheet.cell(3, 1, reversed_str + '_duplicated')
+        # Save the workbook
+        workbook.save(filepath)
 
-    workbook.save(filepath)
+    except Exception as error:
+        print(error)
 
 
 # ---------------------------------------------------------------------------- #
@@ -254,6 +269,7 @@ def get_and_adjust_cells_range(filepath, sheet_name, range_stx):
 
 def do_excel_from_data(filepath, data, sheet_name=None,):
     '''do_excel_from_data From a list of list data, create a sheet.
+        Generated file - local : generated/data_to_excel.xlsx
         - from data builds sheet file - determine n rows and n columns
 
     Args:
@@ -262,28 +278,27 @@ def do_excel_from_data(filepath, data, sheet_name=None,):
             data (list): list of list e.g.: [[],[],[]]
     '''
 
-    # workbook creation ore retrieval
-    workbook = create_local_excel_file(filepath, 'Products')
+    # workbook creation or retrieval
+    workbook, worksheet, filename = create_local_excel_file(
+        filepath, 'Products'
+    )
     worksheet = workbook.active if not sheet_name else workbook[sheet_name]
 
-    # create number of rows
-    # worksheet.append()
-
-    print('worksheet', worksheet)
-
     # -------------------------- DATA TO CELLS STRUCTURE ------------------------- #
-    # create cells values for data coordination (!= cell address)
-    for (row_idx, row) in enumerate(data):
-        # Appends in the end row - not scallable
-        # worksheet.append(row)
+    # --------------------------- Not scalable version --------------------------- #
+    first_file_row_values = [
+        excelCell.value for excelCell in list(worksheet.rows)[0]
+    ]
+    are_same_headers = first_file_row_values == data[0]
 
-        # for (col_idx, col) in enumerate(row):
-        #     value = data[row_idx][col_idx]
-        #     print('--', row_idx, col_idx, value)
-        #     worksheet.cell(row_idx, col_idx, 'up')
-        # worksheet
-        # worksheet.
+    # Generates once the file and write data to excel sheet
+    if not are_same_headers:
+        for (data_row_idx, data_row) in enumerate(data):
+            for (col_idx, col) in enumerate(data_row):
+                value = data[data_row_idx][col_idx]
+                workbook.save(filepath)
+        print('\tData written successfully.')
+    else:
+        print('\t> Nothing was written: data to write already exist.')
 
-        # workbook.save(filepath)
-
-        # by cell address
+    print('\t> See File:', filepath)

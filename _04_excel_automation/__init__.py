@@ -9,7 +9,7 @@ from excel_gspread import (connect_to_google_account,
                            create_and_share_google_sheet, create_sheets,
                            delete_created_spreadsheets, delete_sheets,
                            manipulate_google_sheet, rename_sheet)
-from excel_openpyxl import CURRENT_DIR as CTX_DIX
+from excel_openpyxl import CURRENT_DIR as CTX_DIR
 from excel_openpyxl import (LOCAL_EXCEL_PATH, LOCAL_SAMPLE_EMPLOYEES_RANTING,
                             automate_excel_spreadsheet_import,
                             create_local_excel_file, create_spreadsheet_sheet,
@@ -40,60 +40,67 @@ def run():
     def explore_openpyxl():
         """Execute functions excel_openpyxl"""
 
-        # log('EXCEL AUTOMATION - OPENPYXL')
-        # # 1.create local excel file
-        # new_worksheet = create_local_excel_file()
+        log('EXCEL AUTOMATION - OPENPYXL')
+        # 1.create local excel file
+        new_workbook, worksheet, filename = create_local_excel_file()
+        print('\t--> filename:', filename)
+        print('\t--> worksheet:', worksheet)
+        print('\t--> new_workbook:', new_workbook)
 
-        # # 2. import content from local excel file
-        # workbook = automate_excel_spreadsheet_import()
-        # worksheets = workbook.worksheets
+        # 2. import content from local excel file
+        workbook = automate_excel_spreadsheet_import()
 
-        # # 3. create a new spreadsheet sheet
-        # sheet = create_spreadsheet_sheet(
-        #     LOCAL_EXCEL_PATH, 'new_sheeeeeet'
-        # )
-        # # print('---sheet', sheet)
+        # 3. create a new spreadsheet sheet
+        workbook, sheet, filepath = create_spreadsheet_sheet(
+            LOCAL_EXCEL_PATH,
+            'new_sheeeeeet'
+        )
+        print('\t --> sheet', sheet)
 
-        # rename_spreadsheet_sheet(
-        #     LOCAL_EXCEL_PATH,
-        #     'new_sheeeeeet4',
-        #     'EXCEL SHEET'
-        # )
+        workbook = rename_spreadsheet_sheet(
+            LOCAL_EXCEL_PATH,
+            'new_sheeeeeet',
+            'EXCEL SHEET'
+        )
 
-        # # deleting a spreadsheet sheet
-        # sheets_to_remove = []
-        # for _sh in worksheets:
-        #     if _sh.title not in ['Sheet', 'EXCEL SHEET']:
-        #         sheets_to_remove.append(_sh.title)
+        # deleting a spreadsheet sheet
+        sheets_to_remove = []
+        for _sh in workbook.worksheets:
+            if _sh.title not in ['Sheet', 'EXCEL SHEET']:
+                sheets_to_remove.append(_sh.title)
+        print('\t--> sheets_to_remove:', sheets_to_remove)
 
-        # updated_workbook = delete_spreadsheet_sheets(
-        #     LOCAL_EXCEL_PATH,
-        #     sheets_to_remove
-        # )
+        updated_workbook = delete_spreadsheet_sheets(
+            LOCAL_EXCEL_PATH,
+            sheets_to_remove
+        )
+        print('\t--> current workbook up to date:', updated_workbook.worksheets)
 
-        # _workbook_content = list(map(
-        #     lambda v: v.title,
-        #     updated_workbook
-        # ))
-        # print('\n\n\n--- [ 📌 Workbook Content ]\n------>', _workbook_content)
+        _workbook_content = list(map(
+            lambda v: v.title,
+            updated_workbook
+        ))
+        print('\n\n\n--- [ 📌 Workbook Content ]\n------>', _workbook_content)
 
-        # -------------------------------- CELL FOCUS -------------------------------- #
+        # # -------------------------------- CELL FOCUS -------------------------------- #
         manipulate_cells(LOCAL_EXCEL_PATH, 'EXCEL SHEET', [])
 
         # Ranges [ read, write ]
         ''' Observing the file:
-                        - as a reader, deduct range for all values in order to have the cell range
-                        - function will get the range
-                        - function will adjust:
-                                        - the invalid string cells to empty string
-                                        - the invalid number ( n < 0 -> 0 or n > 10 -> 10)
-                        - and save this into a new file into the generated folder
-            '''
-        cells_range = get_and_adjust_cells_range(
-            LOCAL_SAMPLE_EMPLOYEES_RANTING, 'Ratings', 'b3:e11')
-        print(f'\t> Cells Range: \n\t> {cells_range}')
+			- as a reader, deduct range for all values in order to have the cell range
+			- function will get the range
+			- function will adjust:
+				- the invalid string cells to empty string
+				- the invalid number ( n < 0 -> 0 or n > 10 -> 10)
+			- and save this into a new file into the generated folder
+        '''
+        cells_rows = get_and_adjust_cells_range(
+            LOCAL_SAMPLE_EMPLOYEES_RANTING, 'Ratings', 'b3:e11'
+        )
+        print(f'\n\t> Cells Range: \n\t> {cells_rows}')
+        print(f'\t> Cell 1 values: \n\t> {cells_rows[0][0].value}')
 
-        # data to file
+        # # data to file
         data_to_excel = [
             ['Products', 'Category', 'Price'],
             ['Iphone', 'Electronic', '1500'],
@@ -102,7 +109,7 @@ def run():
             ['Dictionary', 'Book', '30'],
         ]
         do_excel_from_data(
-            filepath=CTX_DIX / 'generated' / 'data_to_excel.xlsx',
+            filepath=CTX_DIR / 'generated' / 'data_to_excel.xlsx',
             data=data_to_excel
         )
 
