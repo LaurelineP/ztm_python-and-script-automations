@@ -6,9 +6,11 @@ from pathlib import Path
 
 import dotenv
 from excel_gspread import (connect_to_google_account,
-                           create_and_share_google_sheet, create_sheets,
-                           delete_created_spreadsheets, delete_sheets,
-                           manipulate_google_sheet, rename_sheet)
+                           create_and_share_google_sheet,
+                           create_google_excel_sheet_employees_ranking,
+                           create_sheets, delete_created_spreadsheets,
+                           delete_sheets, manipulate_google_sheet,
+                           rename_sheet)
 from excel_openpyxl import CURRENT_DIR as CTX_DIR
 from excel_openpyxl import (LOCAL_EXCEL_PATH, LOCAL_SAMPLE_EMPLOYEES_RANTING,
                             automate_excel_spreadsheet_import,
@@ -37,6 +39,9 @@ print('\n\n\n')
 
 def run():
 
+    # ---------------------------------------------------------------------------- #
+    #                CREATE A LOCAL EXCEL SHEET PROGRAM EXPLORATION                #
+    # ---------------------------------------------------------------------------- #
     def explore_openpyxl():
         """Execute functions excel_openpyxl"""
 
@@ -114,6 +119,7 @@ def run():
         )
 
     explore_openpyxl()
+# ---------------------------- PROJECT EXPLORATION --------------------------- #
 
     def explore_project_ex__employees_spreadsheet():
         '''explore_project_ex__employees_spreadsheet
@@ -152,9 +158,11 @@ def run():
             ]
         )
 
-        # ----------------------------- CELL MANIPULATION ---------------------------- #
+    explore_project_ex__employees_spreadsheet()
 
-    # explore_project_ex__employees_spreadsheet()
+    # ---------------------------------------------------------------------------- #
+    #                    CREATE A GOOGLE EXCEL SHEET EXPLORATION                   #
+    # ---------------------------------------------------------------------------- #
 
     def explore_gspread():
         """Execute functions excel_gspread"""
@@ -196,7 +204,11 @@ def run():
         # Delete sheets ( worksheet )
         delete_sheets(spreadsheet_title, ['three'])
 
-    # explore_gspread()
+    explore_gspread()
+
+    def explore_project_ex__employees_spreadsheet_google():
+        create_google_excel_sheet_employees_ranking()
+    explore_project_ex__employees_spreadsheet_google()
 
 
 run()

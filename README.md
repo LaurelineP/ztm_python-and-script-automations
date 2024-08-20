@@ -1202,3 +1202,5 @@ _Spreadsheet > sheet > cells_
   - editing / adding content to one cell - by row / col / coordinations   
   `sheet.update_cell(<row-index>, <col-index>, <value>)`
 
+#### ➡️ Ranges
+  - spreadsheet.get('a1:b2')

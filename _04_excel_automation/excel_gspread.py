@@ -108,8 +108,6 @@ def create_and_share_google_sheet(filename="python created excel sheet", email=C
     print('\n[[ GSpread ] Automate excel sheet - create ]')
 
     try:
-        # print('GOOGLE_CLIENT details', GOOGLE_CLIENT.open(filename))
-        # spreadsheet = GOOGLE_CLIENT.create(filename)
         spreadsheet_names = [
             s['name'] for s in GOOGLE_CLIENT.list_spreadsheet_files()
         ]
@@ -154,14 +152,6 @@ def delete_created_spreadsheets(filename=None):
             print(f'\tHandling spreadsheet {spSheet}')
             print('--- perm', GOOGLE_CLIENT.list_permissions(spSheet.id)[0])
             del spSheet
-            # GOOGLE_CLIENT.del_spreadsheet(spSheet.id)
-            # GOOGLE_CLIENT.insert_permission(
-            #     file_id=spSheet.id,
-            #     value=CONFIG['GOOGLE_ACCOUNT_SERVICE_EMAIL'],
-            #     perm_type='user',
-            #     role='writer',
-            #     notify=True
-            # )
 
     print('Check spreadsheet after clearing', len(GOOGLE_CLIENT.openall()))
 
@@ -207,7 +197,7 @@ def delete_sheets(filename, sheets_titles):
             filename (str): google spreadsheet
             sheets_titles (list): list of title names
     '''
-    _log('Create sheets')
+    _log('Delete sheets')
 
     spreadsheet = GOOGLE_CLIENT.open(filename)
     for title in sheets_titles:
@@ -221,3 +211,34 @@ def delete_sheets(filename, sheets_titles):
         if existing_sheet is not None:
             spreadsheet.del_worksheet(existing_sheet)
             print(f'Successfully deleted sheet "{title}".')
+
+
+# Ranges with google sheets
+def create_google_excel_sheet_employees_ranking():
+    '''Create google sheets Employees Ranking
+
+    Args:
+
+    '''
+    _log('Create Employees Ranking Google Sheet')
+
+    EMPLOYEES_RANKING = 'Employees Ranking'
+    print('GOOGLE_CLIENT.list_spreadsheet_files()',
+          GOOGLE_CLIENT.list_spreadsheet_files())
+    has_sheet = EMPLOYEES_RANKING in GOOGLE_CLIENT.list_spreadsheet_files()
+    spreadsheet = GOOGLE_CLIENT.create(EMPLOYEES_RANKING)\
+        if not has_sheet\
+        else GOOGLE_CLIENT.open(EMPLOYEES_RANKING)
+
+    print('\t> Spreadsheet', spreadsheet)
+    print('spreadsheet sheets', spreadsheet.worksheets())
+
+    spreadsheet.share(
+        CONFIG['PERSONAL_EMAIL'],
+        'user',
+        'writer',
+        False
+    )
+
+    # worksheet = spreadsheet.add_worksheet()
+    # print('worksheet:', worksheet)
